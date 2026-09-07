@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Web - Daniel Halomoan Siregar</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .tech-pattern {
+            background-color: #0f172a; /* slate-900 */
+            background-image: linear-gradient(rgba(6, 182, 212, 0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .glow-text {
+            text-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #06b6d4; 
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-300 antialiased selection:bg-cyan-500 selection:text-slate-900">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-lg border-b border-slate-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-cyan-400 font-black text-xl tracking-wider">DANIEL<span class="text-white">.IT</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-slate-300 hover:text-cyan-400 font-medium transition">Home</a>
+                    <a href="#about" class="text-slate-300 hover:text-cyan-400 font-medium transition">About</a>
+                    <a href="#experience" class="text-slate-300 hover:text-cyan-400 font-medium transition">Experience</a>
+                    <a href="#projects" class="text-slate-300 hover:text-cyan-400 font-medium transition">Projects</a>
+                    <a href="#contact" class="text-slate-300 hover:text-cyan-400 font-medium transition">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-800 border-b border-slate-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-slate-300 hover:text-cyan-400 font-medium">Home</a>
+                <a href="#about" class="block px-3 py-2 text-slate-300 hover:text-cyan-400 font-medium">About</a>
+                <a href="#experience" class="block px-3 py-2 text-slate-300 hover:text-cyan-400 font-medium">Experience</a>
+                <a href="#projects" class="block px-3 py-2 text-slate-300 hover:text-cyan-400 font-medium">Projects</a>
+                <a href="#contact" class="block px-3 py-2 text-slate-300 hover:text-cyan-400 font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center tech-pattern pt-16 overflow-hidden">
+        <!-- Decor elements -->
+        <div class="absolute top-1/4 left-10 w-72 h-72 bg-cyan-600/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
+        
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center flex flex-col items-center">
+            <p class="text-cyan-400 font-bold tracking-widest uppercase mb-4 animate-bounce">Welcome to my portfolio</p>
+            <h1 class="text-5xl md:text-7xl font-black text-white tracking-tighter mb-6 glow-text leading-tight">
+                DANIEL HALOMOAN <br class="hidden md:block"> SIREGAR
+            </h1>
+            <div class="w-24 h-1.5 bg-cyan-500 mb-8 rounded-full shadow-[0_0_15px_rgba(6,182,212,0.8)]"></div>
+            <h2 class="text-xl md:text-3xl font-semibold text-slate-300 mb-8 max-w-2xl">
+                Computer Engineering <span class="text-slate-500">|</span> IT Infrastructure <span class="text-slate-500">|</span> Hardware & IoT
+            </h2>
+            <div class="flex gap-4">
+                <a href="#projects" class="px-8 py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold rounded-lg shadow-lg shadow-cyan-500/30 transition transform hover:-translate-y-1">
+                    View Projects
+                </a>
+                <a href="#contact" class="px-8 py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-lg border border-slate-600 transition transform hover:-translate-y-1">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 bg-slate-800 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <!-- Image -->
+                <div class="w-full md:w-1/3 flex justify-center">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80">
+                        <div class="absolute inset-0 bg-cyan-500 rounded-2xl transform rotate-6 opacity-50"></div>
+                        <div class="absolute inset-0 bg-slate-700 rounded-2xl transform -rotate-3 border border-slate-600 overflow-hidden shadow-2xl">
+                            <!-- Fallback image used in case user didn't upload profile pic this time, but referencing previous name -->
+                            <img src="29 Januari 1.jpeg" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/500x500/1e293b/06b6d4?text=Foto+Profil'" alt="Daniel Profile">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Text -->
+                <div class="w-full md:w-2/3">
+                    <div class="flex items-center gap-4 mb-6">
+                        <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-wider">About Me</h2>
+                        <div class="h-px bg-slate-600 flex-1"></div>
+                    </div>
+                    <p class="text-lg text-slate-300 leading-relaxed mb-8 border-l-4 border-cyan-500 pl-6 bg-slate-800/50 py-2">
+                        Lulusan <strong>D3 Teknik Komputer</strong> dari Politeknik Negeri Medan yang berorientasi pada praktik (<i>hands-on</i>) dengan pengalaman nyata dalam <strong>IT Infrastructure, Networking, Hardware, Access Control, dan IoT</strong>. Saya juga memiliki keahlian dalam pengembangan sistem berbasis Python dan latar belakang Multimedia yang memperkuat kemampuan visual serta dokumentasi teknis.
+                    </p>
+                    
+                    <h3 class="text-sm font-bold text-cyan-400 uppercase tracking-widest mb-4">Core Competencies</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-700 text-center hover:border-cyan-500 transition group">
+                            <i class="fas fa-network-wired text-3xl text-slate-500 mb-3 group-hover:text-cyan-400 transition"></i>
+                            <p class="text-sm font-semibold text-slate-300">Networking</p>
+                        </div>
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-700 text-center hover:border-cyan-500 transition group">
+                            <i class="fas fa-server text-3xl text-slate-500 mb-3 group-hover:text-cyan-400 transition"></i>
+                            <p class="text-sm font-semibold text-slate-300">Hardware & Auth</p>
+                        </div>
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-700 text-center hover:border-cyan-500 transition group">
+                            <i class="fas fa-microchip text-3xl text-slate-500 mb-3 group-hover:text-cyan-400 transition"></i>
+                            <p class="text-sm font-semibold text-slate-300">IoT Systems</p>
+                        </div>
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-700 text-center hover:border-cyan-500 transition group">
+                            <i class="fab fa-python text-3xl text-slate-500 mb-3 group-hover:text-cyan-400 transition"></i>
+                            <p class="text-sm font-semibold text-slate-300">Software & AI</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="py-24 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center gap-4 mb-16">
+                <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-wider">Professional Experience</h2>
+                <div class="h-px bg-slate-700 flex-1"></div>
+            </div>
+
+            <div class="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden shadow-2xl">
+                <!-- Header -->
+                <div class="bg-gradient-to-r from-slate-900 to-slate-800 p-6 md:p-8 border-b border-slate-700 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-white">PT Infratech Network Solusindo</h3>
+                        <p class="text-cyan-400 text-lg font-semibold mt-1">IT Support / Network Intern</p>
+                    </div>
+                    <div class="bg-slate-700/50 px-4 py-2 rounded-lg border border-slate-600 inline-block w-max">
+                        <span class="text-slate-300 font-medium"><i class="far fa-calendar-alt mr-2 text-cyan-400"></i> Januari – Maret 2026</span>
+                    </div>
+                </div>
+                
+                <!-- Content -->
+                <div class="p-6 md:p-8 grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <!-- Text Description -->
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-200 mb-4 flex items-center"><i class="fas fa-tasks mr-3 text-cyan-500"></i> Aktivitas & Tanggung Jawab:</h4>
+                        <ul class="space-y-4 text-slate-400">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-cyan-500 mt-1 mr-3"></i>
+                                <span>Penarikan kabel jaringan (network cabling) dan instalasi ducting.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-cyan-500 mt-1 mr-3"></i>
+                                <span>Merakit dan mengonfigurasi hardware access door control panel.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-cyan-500 mt-1 mr-3"></i>
+                                <span>Konfigurasi mesin absensi biometrik Solution X105.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-cyan-500 mt-1 mr-3"></i>
+                                <span>Troubleshooting hardware jaringan dan konektivitas harian.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-cyan-500 mt-1 mr-3"></i>
+                                <span>Dokumentasi kegiatan teknis (termasuk multimedia) melalui laporan.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Image Grid -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="col-span-2 h-48 md:h-56 rounded-xl overflow-hidden border border-slate-600 group relative">
+                            <img src="23 Januari 1.jpeg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" onerror="this.src='https://placehold.co/600x300/1e293b/06b6d4?text=Aktivitas'" alt="Aktivitas Magang">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-white font-bold text-sm">Site Installation</span>
+                            </div>
+                        </div>
+                        <div class="h-32 md:h-40 rounded-xl overflow-hidden border border-slate-600 group relative">
+                            <img src="Hardware.jpeg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" onerror="this.src='https://placehold.co/300x300/1e293b/06b6d4?text=Hardware'" alt="Hardware">
+                            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                                <span class="text-white font-bold text-xs uppercase tracking-wider">Hardware</span>
+                            </div>
+                        </div>
+                        <div class="h-32 md:h-40 rounded-xl overflow-hidden border border-slate-600 group relative">
+                            <img src="23 Januari.jpeg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" onerror="this.src='https://placehold.co/300x300/1e293b/06b6d4?text=Network'" alt="Network">
+                            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                                <span class="text-white font-bold text-xs uppercase tracking-wider">Network</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="py-24 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-wider">Project & Skills</h2>
+                <div class="h-px bg-slate-600 flex-1"></div>
+            </div>
+
+            <div class="space-y-16">
+                
+                <!-- Category 1: Networking -->
+                <div class="bg-slate-900/50 p-6 md:p-10 rounded-3xl border border-slate-700">
+                    <h3 class="text-2xl font-bold text-cyan-400 mb-8 border-b border-slate-700 pb-4"><i class="fas fa-wifi mr-3"></i> Networking & Infrastructure</h3>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                        <div>
+                            <p class="text-slate-300 leading-relaxed mb-6">
+                                Pengalaman langsung (<i>hands-on</i>) dalam membangun dan menata infrastruktur fisik jaringan. Mencakup instalasi ducting, penarikan kabel LAN, hingga setup awal perangkat jaringan. Selain fisik, saya juga menangani manajemen jaringan logika seperti <strong>MikroTik Hotspot & Voucher Management (Mikhmon)</strong> untuk menyediakan akses internet tersentralisasi bagi klien.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-slate-800 text-cyan-400 font-medium text-xs rounded border border-slate-600">Cabling</span>
+                                <span class="px-3 py-1 bg-slate-800 text-cyan-400 font-medium text-xs rounded border border-slate-600">MikroTik</span>
+                                <span class="px-3 py-1 bg-slate-800 text-cyan-400 font-medium text-xs rounded border border-slate-600">Mikhmon</span>
+                                <span class="px-3 py-1 bg-slate-800 text-cyan-400 font-medium text-xs rounded border border-slate-600">Ruijie/Reyee</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <img src="06 Februari 1.jpeg" class="w-full h-40 object-cover rounded-lg border border-slate-600" onerror="this.src='https://placehold.co/400x300/1e293b/06b6d4?text=Network+Cabling'" alt="Cabling">
+                            <img src="10 Februari 2.jpeg" class="w-full h-40 object-cover rounded-lg border border-slate-600" onerror="this.src='https://placehold.co/400x300/1e293b/06b6d4?text=Device+Setup'" alt="Setup">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Access Control -->
+                <div class="bg-slate-900/50 p-6 md:p-10 rounded-3xl border border-slate-700">
+                    <h3 class="text-2xl font-bold text-cyan-400 mb-8 border-b border-slate-700 pb-4"><i class="fas fa-door-closed mr-3"></i> Access Control & Biometric</h3>
+                    <div class="flex flex-col lg:flex-row-reverse gap-10 items-center">
+                        <div class="w-full lg:w-1/2">
+                            <p class="text-slate-300 leading-relaxed mb-6">
+                                Terlibat intensif dalam perakitan panel kontrol (<i>control panel</i>) untuk sistem keamanan, instalasi fisik di lokasi proyek (misal: Rumah Sakit), serta pengujian interkom IP.
+                            </p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center text-slate-400 text-sm"><i class="fas fa-caret-right text-cyan-500 mr-2"></i> Hikvision IP Intercom Setup</li>
+                                <li class="flex items-center text-slate-400 text-sm"><i class="fas fa-caret-right text-cyan-500 mr-2"></i> Solution X105 Biometric Config</li>
+                                <li class="flex items-center text-slate-400 text-sm"><i class="fas fa-caret-right text-cyan-500 mr-2"></i> Access Door Panel Assembly</li>
+                            </ul>
+                        </div>
+                        <div class="w-full lg:w-1/2 grid grid-cols-2 gap-4">
+                            <img src="12 Januari.jpeg" class="w-full h-48 object-cover rounded-lg border border-slate-600" onerror="this.src='https://placehold.co/400x300/1e293b/06b6d4?text=Hikvision'" alt="Hikvision">
+                            <img src="Access door.jpeg" class="w-full h-48 object-cover rounded-lg border border-slate-600" onerror="this.src='https://placehold.co/400x300/1e293b/06b6d4?text=Access+Door'" alt="Access Door">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3: IoT -->
+                <div class="bg-slate-900/50 p-6 md:p-10 rounded-3xl border border-slate-700">
+                    <h3 class="text-2xl font-bold text-cyan-400 mb-8 border-b border-slate-700 pb-4"><i class="fas fa-microchip mr-3"></i> Internet of Things (IoT)</h3>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-2">Medicine Storage Monitor</h4>
+                            <p class="text-slate-300 leading-relaxed mb-6">
+                                Sistem IoT berbasis ESP32/Mikrokontroler untuk memonitor kondisi ruang penyimpanan obat (suhu & kelembapan) secara <i>real-time</i>. Memiliki mekanisme peringatan kondisi melalui indikator LED dan pengiriman data.
+                            </p>
+                            <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                                <p class="text-xs font-bold text-slate-400 uppercase mb-2">Hardware Logic State:</p>
+                                <div class="flex gap-2">
+                                    <span class="flex-1 text-center py-1 bg-blue-900/50 text-blue-400 text-xs rounded border border-blue-700/50">Dingin</span>
+                                    <span class="flex-1 text-center py-1 bg-yellow-900/50 text-yellow-400 text-xs rounded border border-yellow-700/50">Normal</span>
+                                    <span class="flex-1 text-center py-1 bg-red-900/50 text-red-400 text-xs rounded border border-red-700/50">Panas</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2 h-max">
+                            <img src="Led Biru.jpeg" class="w-full h-32 object-cover rounded border border-slate-600" onerror="this.src='https://placehold.co/200x200/1e3a8a/60a5fa?text=Biru'" alt="LED Biru">
+                            <img src="Led kuning.jpeg" class="w-full h-32 object-cover rounded border border-slate-600" onerror="this.src='https://placehold.co/200x200/ca8a04/facc15?text=Kuning'" alt="LED Kuning">
+                            <img src="Led Merah.jpeg" class="w-full h-32 object-cover rounded border border-slate-600" onerror="this.src='https://placehold.co/200x200/991b1b/f87171?text=Merah'" alt="LED Merah">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 4: Software -->
+                <div class="bg-slate-900/50 p-6 md:p-10 rounded-3xl border border-slate-700">
+                    <h3 class="text-2xl font-bold text-cyan-400 mb-8 border-b border-slate-700 pb-4"><i class="fas fa-robot mr-3"></i> Software & AI Integration</h3>
+                    <div class="flex flex-col lg:flex-row gap-10">
+                        <div class="w-full lg:w-5/12">
+                            <h4 class="text-xl font-bold text-white mb-2">Chatbot "Meddy"</h4>
+                            <p class="text-sm text-cyan-500 mb-4 font-semibold">Sistem Layanan Pelanggan Medsense</p>
+                            <p class="text-slate-300 leading-relaxed mb-6 text-sm">
+                                Chatbot hybrid yang menggabungkan struktur logika statis, klasifikasi intent dengan <strong>Machine Learning (Naive Bayes)</strong>, dan Generative AI <strong>(LLM Gemini)</strong> untuk memberikan respons yang natural dan akurat. Dibangun menggunakan Python.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded border border-slate-600">Python</span>
+                                <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded border border-slate-600">Gemini API</span>
+                                <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded border border-slate-600">Scikit-learn</span>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-7/12 bg-slate-950 rounded-xl overflow-hidden border border-slate-700 shadow-inner flex flex-col">
+                            <div class="bg-slate-800 px-4 py-2 flex items-center gap-2 border-b border-slate-700">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                <span class="text-xs text-slate-400 ml-2 font-mono">chatbot_logic.py</span>
+                            </div>
+                            <img src="Koding Chatbot.png" class="w-full h-48 md:h-64 object-cover object-left-top opacity-80 hover:opacity-100 transition" onerror="this.src='https://placehold.co/800x400/020617/38bdf8?text=Source+Code'" alt="Source Code">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MULTIMEDIA & CERTIFICATIONS -->
+    <section class="py-20 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                
+                <!-- Multimedia -->
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-6 flex items-center"><i class="fas fa-photo-video text-cyan-500 mr-3"></i> Multimedia Background</h3>
+                    <p class="text-slate-400 mb-6">Memiliki kemampuan desain identitas visual dan produksi konten digital (Video/Image Editing), memberikan nilai tambah dalam hal presentasi visual dan UI/UX.</p>
+                    
+                    <div class="flex gap-4">
+                        <div class="w-24 h-24 bg-slate-800 rounded-xl overflow-hidden border border-slate-700">
+                            <img src="Logo.jpg" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100/1e293b/06b6d4?text=2D'" alt="Logo 2D">
+                        </div>
+                        <div class="w-24 h-24 bg-slate-800 rounded-xl overflow-hidden border border-slate-700">
+                            <img src="Logo 3D.jpg" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100/1e293b/06b6d4?text=3D'" alt="Logo 3D">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certs -->
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-6 flex items-center"><i class="fas fa-certificate text-cyan-500 mr-3"></i> Certifications</h3>
+                    <div class="space-y-4">
+                        <!-- Referencing EF SET PDF file provided -->
+                        <a href="EF SET Certificate (1).pdf" target="_blank" class="flex items-center p-4 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl transition group">
+                            <div class="w-10 h-10 rounded-full bg-cyan-900/50 flex items-center justify-center text-cyan-400 mr-4 group-hover:bg-cyan-500 group-hover:text-slate-900 transition">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">EF SET English Certificate</h4>
+                                <p class="text-xs text-slate-400">Level: C1 Advanced (Score: 69/100)</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center p-4 bg-slate-800 border border-slate-700 rounded-xl">
+                            <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-yellow-500 mr-4">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Networking Basics & OS Support</h4>
+                                <p class="text-xs text-slate-400">Cisco Networking Academy</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-4 bg-slate-800 border border-slate-700 rounded-xl">
+                            <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-yellow-500 mr-4">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Dasar AI & Data Science</h4>
+                                <p class="text-xs text-slate-400">Dicoding Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & FOOTER -->
+    <section id="contact" class="py-24 bg-slate-950 relative border-t border-slate-800">
+        <div class="absolute inset-0 tech-pattern opacity-50"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+            <h2 class="text-3xl md:text-5xl font-black text-white mb-8">Let's Build Something.</h2>
+            <p class="text-slate-400 mb-12 max-w-2xl mx-auto">Tertarik untuk berkolaborasi atau mendiskusikan peluang di bidang IT Infrastructure, IoT, atau Software Engineering? Mari terhubung.</p>
+            
+            <div class="flex flex-wrap justify-center gap-6 mb-16">
+                <a href="mailto:danielhalomoan10@gmail.com" class="flex items-center px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-full text-slate-200 transition">
+                    <i class="fas fa-envelope text-cyan-400 mr-3"></i> danielhalomoan10@gmail.com
+                </a>
+                <span class="flex items-center px-6 py-3 bg-slate-800 border border-slate-700 rounded-full text-slate-200 cursor-default">
+                    <i class="fas fa-phone-alt text-cyan-400 mr-3"></i> 0821-6507-1057
+                </span>
+                <a href="https://linkedin.com/in/daniel-halomoan-siregar-21941a338" target="_blank" class="flex items-center px-6 py-3 bg-blue-900/30 hover:bg-blue-900/50 border border-blue-800 rounded-full text-blue-300 transition">
+                    <i class="fab fa-linkedin text-blue-400 mr-3"></i> LinkedIn Profile
+                </a>
+            </div>
+        </div>
+        
+        <div class="border-t border-slate-800 mt-12 pt-8 text-center relative z-10">
+            <p class="text-slate-500 text-sm">© 2026 Daniel Halomoan Siregar. Crafted with Tailwind CSS.</p>
+        </div>
+    </section>
+
+    <!-- Script for mobile menu -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
