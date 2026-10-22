@@ -1,622 +1,652 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Web - Daniel Halomoan Siregar</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-        }
-        .tech-pattern {
-            background-color: #0f172a; /* slate-900 */
-            background-image: linear-gradient(rgba(6, 182, 212, 0.05) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
-        .glow-text {
-            text-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
-        }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0f172a; 
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #334155; 
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #06b6d4; 
-        }
-        /* Modern Animations & Glassmorphism */
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-12px); }
-            100% { transform: translateY(0px); }
-        }
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
-        .glass-card {
-            background: rgba(30, 41, 59, 0.6);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniel Halomoan Siregar — AI Engineer &amp; Automation | Kepala AI Officer @ Nusindo Group | Networking &amp; IoT</title>
+<meta name="description" content="AI Engineer &amp; Automation | Kepala AI Officer @ Nusindo Group | Networking &amp; IoT. Portofolio Daniel Halomoan Siregar: agent AI, otomasi, infrastruktur jaringan, dan IoT.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<meta property="og:title" content="AI Engineer &amp; Automation | Kepala AI Officer @ Nusindo Group | Networking &amp; IoT">
+<meta property="og:description" content="AI Engineer &amp; Automation | Kepala AI Officer @ Nusindo Group | Networking &amp; IoT. Kepala AI Officer di Nusindo Training Center (Nusindo Group), Medan. Saya membangun agent AI WhatsApp 24 jam, portal orkestrator AI, dan aplikasi Rekam Medis Elektronik di server Linux, serta menyusun skill Claude dan master prompt untuk produksi eBook dan bank soal olimpiade. Latar belakang saya D3 Teknik Komputer Politeknik Negeri Medan dengan pengalaman jaringan, IoT, dan multimedia.">
+<meta property="og:url" content="https://daniel100703.github.io/">
+<meta property="og:image" content="https://daniel100703.github.io/assets/images/daniel-halomoan-siregar.png">
+<meta property="og:image:alt" content="Foto Daniel Halomoan Siregar">
+<meta name="theme-color" content="#0b1014">
+<link rel="canonical" href="https://daniel100703.github.io/">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<script src="assets/main.js" defer></script>
 </head>
-<body class="bg-slate-900 text-slate-300 antialiased selection:bg-cyan-500 selection:text-slate-900">
-
-    <!-- NAVBAR -->
-    <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-lg border-b border-slate-800 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0 flex items-center">
-                    <span class="text-cyan-400 font-black text-xl tracking-wider">DANIEL<span class="text-white">.IT</span></span>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-slate-300 hover:text-cyan-400 font-medium transition">Home</a>
-                    <a href="#about" class="text-slate-300 hover:text-cyan-400 font-medium transition">About</a>
-                    <a href="#experience" class="text-slate-300 hover:text-cyan-400 font-medium transition">Experience</a>
-                    <a href="#projects" class="text-slate-300 hover:text-cyan-400 font-medium transition">Projects</a>
-                    <a href="#contact" class="text-slate-300 hover:text-cyan-400 font-medium transition">Contact</a>
-                </div>
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-slate-800 border-b border-slate-700">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="block px-3 py-2 text-slate-300 hover:text-cyan-400 font-medium">Home</a>
-                <a href="#about" class="block px-3 py-2 text-slate-300 hover:text-cyan-400 font-medium">About</a>
-                <a href="#experience" class="block px-3 py-2 text-slate-300 hover:text-cyan-400 font-medium">Experience</a>
-                <a href="#projects" class="block px-3 py-2 text-slate-300 hover:text-cyan-400 font-medium">Projects</a>
-                <a href="#contact" class="block px-3 py-2 text-slate-300 hover:text-cyan-400 font-medium">Contact</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center tech-pattern pt-16 overflow-hidden">
-        <!-- Decor elements -->
-        <div class="absolute top-1/4 left-10 w-72 h-72 bg-cyan-600/20 rounded-full blur-3xl animate-pulse"></div>
-        <div class="absolute bottom-1/4 right-10 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
-        
-        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center flex flex-col items-center">
-            <p class="text-cyan-400 font-bold tracking-widest uppercase mb-4 animate-bounce">Welcome to my portfolio</p>
-            <!-- Gradient Text untuk Nama -->
-            <h1 class="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-white to-blue-500 tracking-tighter mb-6 leading-tight drop-shadow-lg animate-float">
-                DANIEL HALOMOAN <br class="hidden md:block"> SIREGAR
-            </h1>
-            <div class="w-24 h-1.5 bg-gradient-to-r from-cyan-500 to-blue-500 mb-8 rounded-full shadow-[0_0_15px_rgba(6,182,212,0.8)]"></div>
-            <h2 class="text-xl md:text-3xl font-semibold text-slate-300 mb-8 max-w-2xl">
-                Computer Engineering <span class="text-cyan-500/50">|</span> IT Infrastructure <span class="text-cyan-500/50">|</span> Hardware & IoT
-            </h2>
-            <div class="flex gap-4">
-                <!-- Modern Rounded Buttons -->
-                <a href="#projects" class="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-slate-900 font-bold rounded-full shadow-lg shadow-cyan-500/30 transition-all transform hover:-translate-y-1 hover:shadow-cyan-500/50">
-                    View Projects
-                </a>
-                <a href="#contact" class="px-8 py-3 glass-card hover:bg-slate-700/50 text-white font-bold rounded-full transition-all transform hover:-translate-y-1 hover:border-cyan-500/50">
-                    Contact Me
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="py-24 bg-slate-800 relative">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row gap-12 items-center">
-                <!-- Image -->
-                <div class="w-full md:w-1/3 flex justify-center">
-                    <div class="relative w-64 h-64 md:w-80 md:h-80">
-                        <div class="absolute inset-0 bg-cyan-500 rounded-2xl transform rotate-6 opacity-50"></div>
-                        <div class="absolute inset-0 bg-slate-700 rounded-2xl transform -rotate-3 border border-slate-600 overflow-hidden shadow-2xl">
-                            <!-- Fallback image used in case user didn't upload profile pic this time, but referencing previous name -->
-                            <img src="29 Januari 1.jpeg" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/500x500/1e293b/06b6d4?text=Foto+Profil'" alt="Daniel Profile">
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Text -->
-                <div class="w-full md:w-2/3">
-                    <div class="flex items-center gap-4 mb-6">
-                        <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-wider">About Me</h2>
-                        <div class="h-px bg-slate-600 flex-1"></div>
-                    </div>
-                    <p class="text-lg text-slate-300 leading-relaxed mb-8 border-l-4 border-cyan-500 pl-6 bg-slate-800/50 py-2">
-                        Lulusan <strong>D3 Teknik Komputer</strong> dari Politeknik Negeri Medan yang berorientasi pada praktik (<i>hands-on</i>) dengan pengalaman nyata dalam <strong>IT Infrastructure, Networking, Hardware, Access Control, dan IoT</strong>. Saya juga memiliki keahlian dalam pengembangan sistem berbasis Python dan latar belakang Multimedia yang memperkuat kemampuan visual serta dokumentasi teknis.
-                    </p>
-                    
-                    <h3 class="text-sm font-bold text-cyan-400 uppercase tracking-widest mb-4">Core Competencies</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div class="glass-card p-4 rounded-xl text-center hover:border-cyan-500 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(6,182,212,0.2)] transition-all duration-300 group">
-                            <i class="fas fa-network-wired text-3xl text-slate-500 mb-3 group-hover:text-cyan-400 transition-colors"></i>
-                            <p class="text-sm font-semibold text-slate-300 group-hover:text-white transition-colors">Networking</p>
-                        </div>
-                        <div class="glass-card p-4 rounded-xl text-center hover:border-cyan-500 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(6,182,212,0.2)] transition-all duration-300 group">
-                            <i class="fas fa-server text-3xl text-slate-500 mb-3 group-hover:text-cyan-400 transition-colors"></i>
-                            <p class="text-sm font-semibold text-slate-300 group-hover:text-white transition-colors">Hardware & Auth</p>
-                        </div>
-                        <div class="glass-card p-4 rounded-xl text-center hover:border-cyan-500 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(6,182,212,0.2)] transition-all duration-300 group">
-                            <i class="fas fa-microchip text-3xl text-slate-500 mb-3 group-hover:text-cyan-400 transition-colors"></i>
-                            <p class="text-sm font-semibold text-slate-300 group-hover:text-white transition-colors">IoT Systems</p>
-                        </div>
-                        <div class="glass-card p-4 rounded-xl text-center hover:border-cyan-500 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(6,182,212,0.2)] transition-all duration-300 group">
-                            <i class="fab fa-python text-3xl text-slate-500 mb-3 group-hover:text-cyan-400 transition-colors"></i>
-                            <p class="text-sm font-semibold text-slate-300 group-hover:text-white transition-colors">Software & AI</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- EXPERIENCE SECTION -->
-    <section id="experience" class="py-24 bg-slate-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex items-center gap-4 mb-16">
-                <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-wider">Professional Experience</h2>
-                <div class="h-px bg-slate-700 flex-1"></div>
-            </div>
-
-            <div class="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden shadow-2xl">
-                <!-- Header -->
-                <div class="bg-gradient-to-r from-slate-900 to-slate-800 p-6 md:p-8 border-b border-slate-700 flex flex-col md:flex-row md:items-center justify-between gap-4">
-                    <div>
-                        <h3 class="text-2xl md:text-3xl font-bold text-white">PT Infratech Network Solusindo</h3>
-                        <p class="text-cyan-400 text-lg font-semibold mt-1">IT Support / Network Intern</p>
-                    </div>
-                    <div class="bg-slate-700/50 px-4 py-2 rounded-lg border border-slate-600 inline-block w-max">
-                        <span class="text-slate-300 font-medium"><i class="far fa-calendar-alt mr-2 text-cyan-400"></i> Januari – Maret 2026</span>
-                    </div>
-                </div>
-                
-                <!-- Content -->
-                <div class="p-6 md:p-8 grid grid-cols-1 lg:grid-cols-2 gap-10">
-                    <!-- Text Description -->
-                    <div>
-                        <h4 class="text-lg font-bold text-slate-200 mb-4 flex items-center"><i class="fas fa-tasks mr-3 text-cyan-500"></i> Aktivitas & Tanggung Jawab:</h4>
-                        <ul class="space-y-4 text-slate-400">
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-cyan-500 mt-1 mr-3"></i>
-                                <span>Penarikan kabel jaringan (network cabling) dan instalasi ducting.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-cyan-500 mt-1 mr-3"></i>
-                                <span>Merakit dan mengonfigurasi hardware access door control panel.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-cyan-500 mt-1 mr-3"></i>
-                                <span>Konfigurasi mesin absensi biometrik Solution X105.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-cyan-500 mt-1 mr-3"></i>
-                                <span>Troubleshooting hardware jaringan dan konektivitas harian.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-cyan-500 mt-1 mr-3"></i>
-                                <span>Dokumentasi kegiatan teknis (termasuk multimedia) melalui laporan.</span>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Image Grid -->
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="col-span-2 h-48 md:h-56 rounded-xl overflow-hidden border border-slate-600 group relative">
-                            <img src="23 Januari 1.jpeg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" onerror="this.src='https://placehold.co/600x300/1e293b/06b6d4?text=Aktivitas'" alt="Aktivitas Magang">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                                <span class="text-white font-bold text-sm">Site Installation</span>
-                            </div>
-                        </div>
-                        <div class="h-32 md:h-40 rounded-xl overflow-hidden border border-slate-600 group relative">
-                            <img src="Hardware.jpeg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" onerror="this.src='https://placehold.co/300x300/1e293b/06b6d4?text=Hardware'" alt="Hardware">
-                            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                                <span class="text-white font-bold text-xs uppercase tracking-wider">Hardware</span>
-                            </div>
-                        </div>
-                        <div class="h-32 md:h-40 rounded-xl overflow-hidden border border-slate-600 group relative">
-                            <img src="23 Januari.jpeg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" onerror="this.src='https://placehold.co/300x300/1e293b/06b6d4?text=Network'" alt="Network">
-                            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                                <span class="text-white font-bold text-xs uppercase tracking-wider">Network</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROJECTS SECTION -->
-    <section id="projects" class="py-24 bg-slate-800">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex items-center gap-4 mb-12">
-                <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-wider">Project & Skills</h2>
-                <div class="h-px bg-slate-600 flex-1"></div>
-            </div>
-
-            <div class="space-y-16">
-                
-                <!-- Category 1: Networking -->
-                <div class="glass-card p-6 md:p-10 rounded-3xl hover:border-cyan-500/30 transition-colors duration-500 relative overflow-hidden group">
-                    <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <h3 class="text-2xl font-bold text-cyan-400 mb-8 border-b border-slate-700 pb-4 relative z-10"><i class="fas fa-wifi mr-3"></i> Networking & Infrastructure</h3>
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center relative z-10">
-                        <div>
-                            <p class="text-slate-300 leading-relaxed mb-6">
-                                Pengalaman langsung (<i>hands-on</i>) dalam membangun dan menata infrastruktur fisik jaringan. Mencakup instalasi ducting, penarikan kabel LAN, hingga setup awal perangkat jaringan. Selain fisik, saya juga menangani manajemen jaringan logika seperti <strong>MikroTik Hotspot & Voucher Management (Mikhmon)</strong> untuk menyediakan akses internet tersentralisasi bagi klien.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-slate-800 text-cyan-400 font-medium text-xs rounded border border-slate-600">Cabling</span>
-                                <span class="px-3 py-1 bg-slate-800 text-cyan-400 font-medium text-xs rounded border border-slate-600">MikroTik</span>
-                                <span class="px-3 py-1 bg-slate-800 text-cyan-400 font-medium text-xs rounded border border-slate-600">Mikhmon</span>
-                                <span class="px-3 py-1 bg-slate-800 text-cyan-400 font-medium text-xs rounded border border-slate-600">Ruijie/Reyee</span>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-2 gap-4">
-                            <img src="06 Februari 1.jpeg" class="w-full h-40 object-cover rounded-lg border border-slate-600" onerror="this.src='https://placehold.co/400x300/1e293b/06b6d4?text=Network+Cabling'" alt="Cabling">
-                            <img src="10 Februari 2.jpeg" class="w-full h-40 object-cover rounded-lg border border-slate-600" onerror="this.src='https://placehold.co/400x300/1e293b/06b6d4?text=Device+Setup'" alt="Setup">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Category 2: Access Control -->
-                <div class="glass-card p-6 md:p-10 rounded-3xl hover:border-cyan-500/30 transition-colors duration-500 relative overflow-hidden group">
-                    <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <h3 class="text-2xl font-bold text-cyan-400 mb-8 border-b border-slate-700 pb-4 relative z-10"><i class="fas fa-door-closed mr-3"></i> Access Control & Biometric</h3>
-                    <div class="flex flex-col lg:flex-row-reverse gap-10 items-center relative z-10">
-                        <div class="w-full lg:w-1/2">
-                            <p class="text-slate-300 leading-relaxed mb-6">
-                                Terlibat intensif dalam perakitan panel kontrol (<i>control panel</i>) untuk sistem keamanan, instalasi fisik di lokasi proyek (misal: Rumah Sakit), serta pengujian interkom IP.
-                            </p>
-                            <ul class="space-y-2 mb-6">
-                                <li class="flex items-center text-slate-400 text-sm"><i class="fas fa-caret-right text-cyan-500 mr-2"></i> Hikvision IP Intercom Setup</li>
-                                <li class="flex items-center text-slate-400 text-sm"><i class="fas fa-caret-right text-cyan-500 mr-2"></i> Solution X105 Biometric Config</li>
-                                <li class="flex items-center text-slate-400 text-sm"><i class="fas fa-caret-right text-cyan-500 mr-2"></i> Access Door Panel Assembly</li>
-                            </ul>
-                        </div>
-                        <div class="w-full lg:w-1/2 grid grid-cols-2 gap-4">
-                            <img src="12 Januari.jpeg" class="w-full h-48 object-cover rounded-lg border border-slate-600" onerror="this.src='https://placehold.co/400x300/1e293b/06b6d4?text=Hikvision'" alt="Hikvision">
-                            <img src="Access door.jpeg" class="w-full h-48 object-cover rounded-lg border border-slate-600" onerror="this.src='https://placehold.co/400x300/1e293b/06b6d4?text=Access+Door'" alt="Access Door">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Category 3: IoT -->
-                <div class="glass-card p-6 md:p-10 rounded-3xl hover:border-cyan-500/30 transition-colors duration-500 relative overflow-hidden group">
-                    <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <h3 class="text-2xl font-bold text-cyan-400 mb-8 border-b border-slate-700 pb-4 relative z-10"><i class="fas fa-microchip mr-3"></i> Internet of Things (IoT)</h3>
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 relative z-10">
-                        <div>
-                            <h4 class="text-xl font-bold text-white mb-2">Medicine Storage Monitor</h4>
-                            <p class="text-slate-300 leading-relaxed mb-6">
-                                Sistem IoT berbasis ESP32/Mikrokontroler untuk memonitor kondisi ruang penyimpanan obat (suhu & kelembapan) secara <i>real-time</i>. Memiliki mekanisme peringatan kondisi melalui indikator LED dan pengiriman data.
-                            </p>
-                            <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
-                                <p class="text-xs font-bold text-slate-400 uppercase mb-2">Hardware Logic State:</p>
-                                <div class="flex gap-2">
-                                    <span class="flex-1 text-center py-1 bg-blue-900/50 text-blue-400 text-xs rounded border border-blue-700/50">Dingin</span>
-                                    <span class="flex-1 text-center py-1 bg-yellow-900/50 text-yellow-400 text-xs rounded border border-yellow-700/50">Normal</span>
-                                    <span class="flex-1 text-center py-1 bg-red-900/50 text-red-400 text-xs rounded border border-red-700/50">Panas</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-3 gap-2 h-max">
-                            <img src="Led Biru.jpeg" class="w-full h-32 object-cover rounded border border-slate-600" onerror="this.src='https://placehold.co/200x200/1e3a8a/60a5fa?text=Biru'" alt="LED Biru">
-                            <img src="Led kuning.jpeg" class="w-full h-32 object-cover rounded border border-slate-600" onerror="this.src='https://placehold.co/200x200/ca8a04/facc15?text=Kuning'" alt="LED Kuning">
-                            <img src="Led Merah.jpeg" class="w-full h-32 object-cover rounded border border-slate-600" onerror="this.src='https://placehold.co/200x200/991b1b/f87171?text=Merah'" alt="LED Merah">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Category 4: Software -->
-                <div class="glass-card p-6 md:p-10 rounded-3xl hover:border-cyan-500/30 transition-colors duration-500 relative overflow-hidden group">
-                    <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <h3 class="text-2xl font-bold text-cyan-400 mb-8 border-b border-slate-700 pb-4 relative z-10"><i class="fas fa-robot mr-3"></i> Software & AI Integration</h3>
-                    <div class="flex flex-col lg:flex-row gap-10 relative z-10">
-                        <div class="w-full lg:w-5/12">
-                            <h4 class="text-xl font-bold text-white mb-2">Chatbot "Meddy"</h4>
-                            <p class="text-sm text-cyan-500 mb-4 font-semibold">Sistem Layanan Pelanggan Medsense</p>
-                            <p class="text-slate-300 leading-relaxed mb-6 text-sm">
-                                Chatbot hybrid yang menggabungkan struktur logika statis, klasifikasi intent dengan <strong>Machine Learning (Naive Bayes)</strong>, dan Generative AI <strong>(LLM Gemini)</strong> untuk memberikan respons yang natural dan akurat. Dibangun menggunakan Python.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded border border-slate-600">Python</span>
-                                <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded border border-slate-600">Gemini API</span>
-                                <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded border border-slate-600">Scikit-learn</span>
-                            </div>
-                        </div>
-                        <div class="w-full lg:w-7/12 bg-slate-950 rounded-xl overflow-hidden border border-slate-700 shadow-inner flex flex-col">
-                            <div class="bg-slate-800 px-4 py-2 flex items-center gap-2 border-b border-slate-700">
-                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                                <span class="text-xs text-slate-400 ml-2 font-mono">chatbot_logic.py</span>
-                            </div>
-                            <img src="Koding Chatbot.png" class="w-full h-48 md:h-64 object-cover object-left-top opacity-80 hover:opacity-100 transition" onerror="this.src='https://placehold.co/800x400/020617/38bdf8?text=Source+Code'" alt="Source Code">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- MULTIMEDIA & CERTIFICATIONS -->
-    <section class="py-20 bg-slate-900 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex items-center gap-4 mb-12">
-                <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-wider">Multimedia Background</h2>
-                <div class="h-px bg-slate-700 flex-1"></div>
-            </div>
-            
-            <div class="flex flex-col md:flex-row items-center gap-10">
-                <div class="w-full md:w-1/2">
-                    <p class="text-lg text-slate-300 leading-relaxed border-l-4 border-cyan-500 pl-6 bg-slate-800/30 py-4 pr-4 rounded-r-xl">
-                        Memiliki kemampuan desain identitas visual dan produksi konten digital (Video/Image Editing), memberikan nilai tambah dalam hal presentasi visual dan UI/UX untuk setiap proyek sistem yang saya kerjakan.
-                    </p>
-                </div>
-                <div class="w-full md:w-1/2 flex gap-4 justify-center md:justify-start">
-                    <div class="w-32 h-32 bg-slate-800 rounded-2xl overflow-hidden border border-slate-600 shadow-xl hover:shadow-cyan-500/30 hover:-translate-y-2 transition-all duration-300 group">
-                        <img src="Logo.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/200/1e293b/06b6d4?text=2D'" alt="Logo 2D">
-                    </div>
-                    <div class="w-32 h-32 bg-slate-800 rounded-2xl overflow-hidden border border-slate-600 shadow-xl hover:shadow-cyan-500/30 hover:-translate-y-2 transition-all duration-300 group">
-                        <img src="Logo 3D.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/200/1e293b/06b6d4?text=3D'" alt="Logo 3D">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CERTIFICATIONS & BADGES SECTION (20 ITEMS GRID) -->
-    <section class="py-24 bg-slate-800 border-t border-slate-700">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex items-center gap-4 mb-16">
-                <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-wider"><i class="fas fa-award text-cyan-500 mr-4"></i>Certificates & Badges</h2>
-                <div class="h-px bg-slate-600 flex-1"></div>
-            </div>
-
-            <!-- Grid for 20 Items - Sangat presisi dan responsif -->
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
-                
-                <!-- Item 1: EF SET -->
-                <a href="EF SET Certificate (1).pdf" target="_blank" class="glass-card flex flex-col items-center p-4 md:p-5 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(6,182,212,0.15)] transition-all duration-300 group border-t-4 border-slate-600 hover:border-cyan-500">
-                    <div class="w-16 h-16 mb-4 rounded-xl overflow-hidden flex items-center justify-center bg-slate-900 border border-slate-700 group-hover:border-cyan-500/50 transition-colors">
-                        <i class="fas fa-file-pdf text-3xl text-cyan-400 group-hover:scale-110 transition-transform"></i>
-                    </div>
-                    <h4 class="text-white font-bold text-sm text-center leading-tight mb-2 group-hover:text-cyan-300 transition-colors line-clamp-3">EF SET Certificate</h4>
-                    <p class="text-xs text-slate-400 mt-auto text-center">EF Standard English Test</p>
-                </a>
-
-                <!-- Item 2: Networking Basics -->
-                <a href="NetworkingBasicsUpdate20251104-30-pjg1so.pdf" target="_blank" class="glass-card flex flex-col items-center p-4 md:p-5 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(34,197,94,0.15)] transition-all duration-300 group border-t-4 border-slate-600 hover:border-green-500">
-                    <div class="w-16 h-16 mb-4 rounded-xl overflow-hidden flex items-center justify-center bg-white/5 border border-slate-700 group-hover:border-green-500/50 transition-colors p-1">
-                        <img src="networking-basics.png" class="w-full h-full object-contain group-hover:scale-110 transition-transform" alt="Networking Basics">
-                    </div>
-                    <h4 class="text-white font-bold text-sm text-center leading-tight mb-2 group-hover:text-green-300 transition-colors line-clamp-3">Networking Basics</h4>
-                    <p class="text-xs text-slate-400 mt-auto text-center">Cisco</p>
-                </a>
-
-                <!-- Item 3: Build an AI Agent -->
-                <a href="build-an-ai-agent.png" target="_blank" class="glass-card flex flex-col items-center p-4 md:p-5 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.15)] transition-all duration-300 group border-t-4 border-slate-600 hover:border-blue-500">
-                    <div class="w-16 h-16 mb-4 rounded-xl overflow-hidden flex items-center justify-center bg-transparent border border-slate-700 group-hover:border-blue-500/50 transition-colors p-1">
-                        <img src="build-an-ai-agent.png" class="w-full h-full object-contain group-hover:scale-110 transition-transform drop-shadow-md" alt="Build an AI Agent">
-                    </div>
-                    <h4 class="text-white font-bold text-sm text-center leading-tight mb-2 group-hover:text-blue-300 transition-colors line-clamp-3">Build an AI Agent</h4>
-                    <p class="text-xs text-slate-400 mt-auto text-center">IBM SkillsBuild</p>
-                </a>
-
-                <!-- Item 4: IBM Granite Models -->
-                <a href="IBM Granite Models For Software Development.pdf" target="_blank" class="glass-card flex flex-col items-center p-4 md:p-5 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.15)] transition-all duration-300 group border-t-4 border-slate-600 hover:border-blue-500">
-                    <div class="w-16 h-16 mb-4 rounded-xl overflow-hidden flex items-center justify-center bg-transparent border border-slate-700 group-hover:border-blue-500/50 transition-colors p-1">
-                        <img src="Digital Sticker_IBM Granite Models for Software Development.png" class="w-full h-full object-contain group-hover:scale-110 transition-transform drop-shadow-md" alt="IBM Granite Models">
-                    </div>
-                    <h4 class="text-white font-bold text-sm text-center leading-tight mb-2 group-hover:text-blue-300 transition-colors line-clamp-3">IBM Granite Models for Software Development</h4>
-                    <p class="text-xs text-slate-400 mt-auto text-center">IBM SkillsBuild</p>
-                </a>
-
-                <!-- Item 5: Introduction to LLM -->
-                <a href="IBM Introducing LLM.pdf" target="_blank" class="glass-card flex flex-col items-center p-4 md:p-5 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.15)] transition-all duration-300 group border-t-4 border-slate-600 hover:border-blue-500">
-                    <div class="w-16 h-16 mb-4 rounded-xl overflow-hidden flex items-center justify-center bg-transparent border border-slate-700 group-hover:border-blue-500/50 transition-colors p-1">
-                        <img src="Digital Sticker_Introduction to Large Language Models.png" class="w-full h-full object-contain group-hover:scale-110 transition-transform drop-shadow-md" alt="Introduction to LLM">
-                    </div>
-                    <h4 class="text-white font-bold text-sm text-center leading-tight mb-2 group-hover:text-blue-300 transition-colors line-clamp-3">Introduction to Large Language Models</h4>
-                    <p class="text-xs text-slate-400 mt-auto text-center">IBM SkillsBuild</p>
-                </a>
-
-                <!-- Item 6: Lab Troubleshoot -->
-                <a href="IBM Lab Troubles Your Code.pdf" target="_blank" class="glass-card flex flex-col items-center p-4 md:p-5 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.15)] transition-all duration-300 group border-t-4 border-slate-600 hover:border-blue-500">
-                    <div class="w-16 h-16 mb-4 rounded-xl overflow-hidden flex items-center justify-center bg-slate-900 border border-slate-700 group-hover:border-blue-500/50 transition-colors">
-                        <i class="fas fa-file-pdf text-3xl text-blue-400 group-hover:scale-110 transition-transform"></i>
-                    </div>
-                    <h4 class="text-white font-bold text-sm text-center leading-tight mb-2 group-hover:text-blue-300 transition-colors line-clamp-3">Lab: Troubleshoot Your Code Using IBM Bob</h4>
-                    <p class="text-xs text-slate-400 mt-auto text-center">IBM SkillsBuild</p>
-                </a>
-
-                <!-- Item 7: Intelligent by design -->
-                <a href="IBM Intelligent by design.pdf" target="_blank" class="glass-card flex flex-col items-center p-4 md:p-5 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.15)] transition-all duration-300 group border-t-4 border-slate-600 hover:border-blue-500">
-                    <div class="w-16 h-16 mb-4 rounded-xl overflow-hidden flex items-center justify-center bg-slate-900 border border-slate-700 group-hover:border-blue-500/50 transition-colors">
-                        <i class="fas fa-file-pdf text-3xl text-blue-400 group-hover:scale-110 transition-transform"></i>
-                    </div>
-                    <h4 class="text-white font-bold text-sm text-center leading-tight mb-2 group-hover:text-blue-300 transition-colors line-clamp-3">Intelligent by design</h4>
-                    <p class="text-xs text-slate-400 mt-auto text-center">IBM</p>
-                </a>
-
-                <!-- Item 8: Placeholder IoT -->
-                <a href="#" class="glass-card flex flex-col items-center p-4 md:p-5 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(34,197,94,0.15)] transition-all duration-300 group border-t-4 border-slate-600 hover:border-green-500">
-                    <div class="w-16 h-16 mb-4 rounded-xl overflow-hidden flex items-center justify-center bg-slate-900 border border-slate-700 group-hover:border-green-500/50 transition-colors">
-                        <i class="fas fa-microchip text-3xl text-green-400 group-hover:scale-110 transition-transform"></i>
-                    </div>
-                    <h4 class="text-white font-bold text-sm text-center leading-tight mb-2 group-hover:text-green-300 transition-colors line-clamp-3">IoT Fundamentals</h4>
-                    <p class="text-xs text-slate-400 mt-auto text-center">Cisco / Placeholder</p>
-                </a>
-
-                <!-- Item 9: Placeholder Security -->
-                <a href="#" class="glass-card flex flex-col items-center p-4 md:p-5 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(34,197,94,0.15)] transition-all duration-300 group border-t-4 border-slate-600 hover:border-green-500">
-                    <div class="w-16 h-16 mb-4 rounded-xl overflow-hidden flex items-center justify-center bg-slate-900 border border-slate-700 group-hover:border-green-500/50 transition-colors">
-                        <i class="fas fa-shield-alt text-3xl text-green-400 group-hover:scale-110 transition-transform"></i>
-                    </div>
-                    <h4 class="text-white font-bold text-sm text-center leading-tight mb-2 group-hover:text-green-300 transition-colors line-clamp-3">Cybersecurity Essentials</h4>
-                    <p class="text-xs text-slate-400 mt-auto text-center">Cisco / Placeholder</p>
-                </a>
-
-                <!-- Item 10: Placeholder Python -->
-                <a href="#" class="glass-card flex flex-col items-center p-4 md:p-5 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(234,179,8,0.15)] transition-all duration-300 group border-t-4 border-slate-600 hover:border-yellow-500">
-                    <div class="w-16 h-16 mb-4 rounded-xl overflow-hidden flex items-center justify-center bg-slate-900 border border-slate-700 group-hover:border-yellow-500/50 transition-colors">
-                        <i class="fab fa-python text-3xl text-yellow-400 group-hover:scale-110 transition-transform"></i>
-                    </div>
-                    <h4 class="text-white font-bold text-sm text-center leading-tight mb-2 group-hover:text-yellow-300 transition-colors line-clamp-3">Python for Data Science</h4>
-                    <p class="text-xs text-slate-400 mt-auto text-center">IBM / Placeholder</p>
-                </a>
-
-                <!-- Item 11: Placeholder Cloud -->
-                <a href="#" class="glass-card flex flex-col items-center p-4 md:p-5 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.15)] transition-all duration-300 group border-t-4 border-slate-600 hover:border-blue-500">
-                    <div class="w-16 h-16 mb-4 rounded-xl overflow-hidden flex items-center justify-center bg-slate-900 border border-slate-700 group-hover:border-blue-500/50 transition-colors">
-                        <i class="fas fa-cloud text-3xl text-blue-400 group-hover:scale-110 transition-transform"></i>
-                    </div>
-                    <h4 class="text-white font-bold text-sm text-center leading-tight mb-2 group-hover:text-blue-300 transition-colors line-clamp-3">Cloud Computing Core</h4>
-                    <p class="text-xs text-slate-400 mt-auto text-center">IBM / Placeholder</p>
-                </a>
-
-                <!-- Item 12: Placeholder Network Defense -->
-                <a href="#" class="glass-card flex flex-col items-center p-4 md:p-5 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(34,197,94,0.15)] transition-all duration-300 group border-t-4 border-slate-600 hover:border-green-500">
-                    <div class="w-16 h-16 mb-4 rounded-xl overflow-hidden flex items-center justify-center bg-slate-900 border border-slate-700 group-hover:border-green-500/50 transition-colors">
-                        <i class="fas fa-network-wired text-3xl text-green-400 group-hover:scale-110 transition-transform"></i>
-                    </div>
-                    <h4 class="text-white font-bold text-sm text-center leading-tight mb-2 group-hover:text-green-300 transition-colors line-clamp-3">Network Defense</h4>
-                    <p class="text-xs text-slate-400 mt-auto text-center">Cisco / Placeholder</p>
-                </a>
-
-                <!-- Item 13: Placeholder Agile -->
-                <a href="#" class="glass-card flex flex-col items-center p-4 md:p-5 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.15)] transition-all duration-300 group border-t-4 border-slate-600 hover:border-blue-500">
-                    <div class="w-16 h-16 mb-4 rounded-xl overflow-hidden flex items-center justify-center bg-slate-900 border border-slate-700 group-hover:border-blue-500/50 transition-colors">
-                        <i class="fas fa-project-diagram text-3xl text-blue-400 group-hover:scale-110 transition-transform"></i>
-                    </div>
-                    <h4 class="text-white font-bold text-sm text-center leading-tight mb-2 group-hover:text-blue-300 transition-colors line-clamp-3">Agile Explorer</h4>
-                    <p class="text-xs text-slate-400 mt-auto text-center">IBM / Placeholder</p>
-                </a>
-
-                <!-- Item 14: Placeholder Design Thinking -->
-                <a href="#" class="glass-card flex flex-col items-center p-4 md:p-5 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.15)] transition-all duration-300 group border-t-4 border-slate-600 hover:border-blue-500">
-                    <div class="w-16 h-16 mb-4 rounded-xl overflow-hidden flex items-center justify-center bg-slate-900 border border-slate-700 group-hover:border-blue-500/50 transition-colors">
-                        <i class="fas fa-lightbulb text-3xl text-blue-400 group-hover:scale-110 transition-transform"></i>
-                    </div>
-                    <h4 class="text-white font-bold text-sm text-center leading-tight mb-2 group-hover:text-blue-300 transition-colors line-clamp-3">Enterprise Design Thinking</h4>
-                    <p class="text-xs text-slate-400 mt-auto text-center">IBM / Placeholder</p>
-                </a>
-
-                <!-- Item 15: Placeholder Data -->
-                <a href="#" class="glass-card flex flex-col items-center p-4 md:p-5 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(234,179,8,0.15)] transition-all duration-300 group border-t-4 border-slate-600 hover:border-yellow-500">
-                    <div class="w-16 h-16 mb-4 rounded-xl overflow-hidden flex items-center justify-center bg-slate-900 border border-slate-700 group-hover:border-yellow-500/50 transition-colors">
-                        <i class="fas fa-chart-pie text-3xl text-yellow-400 group-hover:scale-110 transition-transform"></i>
-                    </div>
-                    <h4 class="text-white font-bold text-sm text-center leading-tight mb-2 group-hover:text-yellow-300 transition-colors line-clamp-3">Data Analytics Essentials</h4>
-                    <p class="text-xs text-slate-400 mt-auto text-center">Google / Placeholder</p>
-                </a>
-
-                <!-- Item 16: Placeholder Linux -->
-                <a href="#" class="glass-card flex flex-col items-center p-4 md:p-5 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(255,255,255,0.15)] transition-all duration-300 group border-t-4 border-slate-600 hover:border-slate-300">
-                    <div class="w-16 h-16 mb-4 rounded-xl overflow-hidden flex items-center justify-center bg-slate-900 border border-slate-700 group-hover:border-slate-400/50 transition-colors">
-                        <i class="fab fa-linux text-3xl text-white group-hover:scale-110 transition-transform"></i>
-                    </div>
-                    <h4 class="text-white font-bold text-sm text-center leading-tight mb-2 group-hover:text-slate-300 transition-colors line-clamp-3">NDG Linux Unhatched</h4>
-                    <p class="text-xs text-slate-400 mt-auto text-center">Cisco / NDG / Placeholder</p>
-                </a>
-
-                <!-- Item 17: Placeholder Hardware -->
-                <a href="#" class="glass-card flex flex-col items-center p-4 md:p-5 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(249,115,22,0.15)] transition-all duration-300 group border-t-4 border-slate-600 hover:border-orange-500">
-                    <div class="w-16 h-16 mb-4 rounded-xl overflow-hidden flex items-center justify-center bg-slate-900 border border-slate-700 group-hover:border-orange-500/50 transition-colors">
-                        <i class="fas fa-memory text-3xl text-orange-400 group-hover:scale-110 transition-transform"></i>
-                    </div>
-                    <h4 class="text-white font-bold text-sm text-center leading-tight mb-2 group-hover:text-orange-300 transition-colors line-clamp-3">Hardware Assembly & Network</h4>
-                    <p class="text-xs text-slate-400 mt-auto text-center">Infratech / Placeholder</p>
-                </a>
-
-                <!-- Item 18: Placeholder Access Control -->
-                <a href="#" class="glass-card flex flex-col items-center p-4 md:p-5 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(239,68,68,0.15)] transition-all duration-300 group border-t-4 border-slate-600 hover:border-red-500">
-                    <div class="w-16 h-16 mb-4 rounded-xl overflow-hidden flex items-center justify-center bg-slate-900 border border-slate-700 group-hover:border-red-500/50 transition-colors">
-                        <i class="fas fa-door-closed text-3xl text-red-400 group-hover:scale-110 transition-transform"></i>
-                    </div>
-                    <h4 class="text-white font-bold text-sm text-center leading-tight mb-2 group-hover:text-red-300 transition-colors line-clamp-3">Access Control Systems</h4>
-                    <p class="text-xs text-slate-400 mt-auto text-center">Hikvision / Placeholder</p>
-                </a>
-
-                <!-- Item 19: Placeholder IT Infra -->
-                <a href="#" class="glass-card flex flex-col items-center p-4 md:p-5 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(168,85,247,0.15)] transition-all duration-300 group border-t-4 border-slate-600 hover:border-purple-500">
-                    <div class="w-16 h-16 mb-4 rounded-xl overflow-hidden flex items-center justify-center bg-slate-900 border border-slate-700 group-hover:border-purple-500/50 transition-colors">
-                        <i class="fas fa-sitemap text-3xl text-purple-400 group-hover:scale-110 transition-transform"></i>
-                    </div>
-                    <h4 class="text-white font-bold text-sm text-center leading-tight mb-2 group-hover:text-purple-300 transition-colors line-clamp-3">IT Infrastructure Planning</h4>
-                    <p class="text-xs text-slate-400 mt-auto text-center">CompTIA / Placeholder</p>
-                </a>
-
-                <!-- Item 20: Placeholder Soft Skills -->
-                <a href="#" class="glass-card flex flex-col items-center p-4 md:p-5 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(236,72,153,0.15)] transition-all duration-300 group border-t-4 border-slate-600 hover:border-pink-500">
-                    <div class="w-16 h-16 mb-4 rounded-xl overflow-hidden flex items-center justify-center bg-slate-900 border border-slate-700 group-hover:border-pink-500/50 transition-colors">
-                        <i class="fas fa-users text-3xl text-pink-400 group-hover:scale-110 transition-transform"></i>
-                    </div>
-                    <h4 class="text-white font-bold text-sm text-center leading-tight mb-2 group-hover:text-pink-300 transition-colors line-clamp-3">Job Readiness & Soft Skills</h4>
-                    <p class="text-xs text-slate-400 mt-auto text-center">IBM SkillsBuild / Placeholder</p>
-                </a>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT & FOOTER -->
-    <section id="contact" class="py-24 bg-slate-950 relative border-t border-slate-800">
-        <div class="absolute inset-0 tech-pattern opacity-50"></div>
-        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
-            <h2 class="text-3xl md:text-5xl font-black text-white mb-8">Let's Build Something.</h2>
-            <p class="text-slate-400 mb-12 max-w-2xl mx-auto">Tertarik untuk berkolaborasi atau mendiskusikan peluang di bidang IT Infrastructure, IoT, atau Software Engineering? Mari terhubung.</p>
-            
-            <div class="flex flex-wrap justify-center gap-6 mb-16">
-                <a href="mailto:danielhalomoan10@gmail.com" class="flex items-center px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-full text-slate-200 transition">
-                    <i class="fas fa-envelope text-cyan-400 mr-3"></i> danielhalomoan10@gmail.com
-                </a>
-                <span class="flex items-center px-6 py-3 bg-slate-800 border border-slate-700 rounded-full text-slate-200 cursor-default">
-                    <i class="fas fa-phone-alt text-cyan-400 mr-3"></i> 0821-6507-1057
-                </span>
-                <a href="https://linkedin.com/in/daniel-halomoan-siregar-21941a338" target="_blank" class="flex items-center px-6 py-3 bg-blue-900/30 hover:bg-blue-900/50 border border-blue-800 rounded-full text-blue-300 transition">
-                    <i class="fab fa-linkedin text-blue-400 mr-3"></i> LinkedIn Profile
-                </a>
-            </div>
-        </div>
-        
-        <div class="border-t border-slate-800 mt-12 pt-8 text-center relative z-10">
-            <p class="text-slate-500 text-sm">© 2026 Daniel Halomoan Siregar. Crafted with Tailwind CSS.</p>
-        </div>
-    </section>
-
-    <!-- Script for mobile menu -->
-    <script>
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu on link click
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
-        });
-    </script>
+<body>
+<a href="#main" class="skip-link">Lewati ke konten utama</a>
+<header class="site-header"><div class="site-container nav-row">
+<a class="brand" href="#home" aria-label="Daniel, beranda"><span class="brand-mark">d<span>.</span></span><span>DANIEL SIREGAR<small>AI · AUTOMATION · INFRASTRUCTURE</small></span></a><nav class="desktop-nav" aria-label="Navigasi utama"><a href="#about">Tentang</a><a href="#experience">Pengalaman</a><a href="#projects">Proyek</a><a href="#certificates">Sertifikat</a><a href="#contact">Kontak</a></nav><a class="nav-cv" href="cv/CV_Daniel_Halomoan_Siregar.pdf" download aria-describedby="cv-status">Download CV <span aria-hidden="true">↓</span></a><button id="menu-toggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-menu"><span aria-hidden="true">☰</span></button>
+</div>
+<nav id="mobile-menu" class="site-container mobile-nav" aria-label="Navigasi seluler" hidden><a href="#about">Tentang</a><a href="#experience">Pengalaman</a><a href="#projects">Proyek</a><a href="#certificates">Sertifikat</a><a href="#contact">Kontak</a></nav></header>
+<main id="main">
+<section id="home" class="hero"><div class="site-container hero-grid">
+<div class="hero-copy">
+<p class="eyebrow hero-eyebrow"><span class="dot"></span> PORTOFOLIO / MEDAN, INDONESIA</p>
+<h1>Daniel<br>Halomoan <span>Siregar.</span>
+</h1>
+<p class="headline">AI Engineer &amp; Automation | Kepala AI Officer @ Nusindo Group | Networking &amp; IoT</p>
+<p class="hero-description">Dari infrastruktur jaringan hingga agent AI. Membangun sistem yang membantu pekerjaan sehari-hari berjalan lebih baik.</p>
+<div class="actions">
+<a class="button button-primary" href="#projects">Jelajahi proyek <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="#contact">Mari terhubung <span aria-hidden="true">↗</span></a>
+</div>
+<div class="hero-footnote">
+<span class="mini-line"></span> Kepala AI Officer · Nusindo Training Center</div>
+</div>
+<div class="portrait-wrap">
+<div class="portrait-frame">
+<div class="portrait-label">
+<span>ENGINEERING WITH PURPOSE</span><span>10 / 2026</span>
+</div>
+<img class="portrait" src="assets/images/daniel-halomoan-siregar.png" width="682" height="941" alt="Foto formal Daniel Halomoan Siregar" fetchpriority="high"><div class="portrait-caption">
+<span>Daniel H. Siregar</span><span>AI &amp; Systems Builder ↗</span>
+</div>
+</div>
+<div class="portrait-tag">
+<span class="dot"></span> AI Engineering meets Infrastructure</div>
+</div>
+</div>
+<div class="site-container hero-bottom">
+<span>AI AGENTS</span><span>AUTOMATION</span><span>LINUX SERVER</span><span>NETWORKING</span><span>INTERNET OF THINGS</span>
+</div></section>
+<section id="about" class="section"><div class="site-container">
+<div class="section-heading">
+<div>
+<p class="eyebrow">01 / TENTANG SAYA</p>
+<h2>Teknologi yang punya<br><span>fungsi nyata.</span>
+</h2>
+</div>
+<p class="section-aside">AI, jaringan, dan sistem yang saling terhubung.</p>
+</div>
+<div class="about-grid">
+<p class="about-text">Kepala AI Officer di Nusindo Training Center (Nusindo Group), Medan. Saya membangun agent AI WhatsApp 24 jam, portal orkestrator AI, dan aplikasi Rekam Medis Elektronik di server Linux, serta menyusun skill Claude dan master prompt untuk produksi eBook dan bank soal olimpiade. Latar belakang saya D3 Teknik Komputer Politeknik Negeri Medan dengan pengalaman jaringan, IoT, dan multimedia.</p>
+<div class="about-note">
+<span class="note-label">PENDIDIKAN</span><h3>D3 Teknik Komputer</h3>
+<p>Politeknik Negeri Medan</p>
+<div class="note-divider"></div>
+<span class="note-label">FOKUS SAAT INI</span><p>AI agent, otomasi alur kerja, dan pengelolaan server Linux.</p>
+</div>
+</div>
+<h3 class="competency-title">Core Competencies</h3>
+<div class="competencies">
+<div>
+<span class="competency-number">01</span><span>AI Engineering &amp; Automation</span>
+</div>
+<div>
+<span class="competency-number">02</span><span>Networking</span>
+</div>
+<div>
+<span class="competency-number">03</span><span>Hardware &amp; Auth</span>
+</div>
+<div>
+<span class="competency-number">04</span><span>IoT Systems</span>
+</div>
+<div>
+<span class="competency-number">05</span><span>Software &amp; AI</span>
+</div>
+</div>
+</div></section>
+<section id="experience" class="section section-muted"><div class="site-container">
+<div class="section-heading">
+<div>
+<p class="eyebrow">02 / PENGALAMAN</p>
+<h2>Dari lapangan<br><span>ke orkestrasi AI.</span>
+</h2>
+</div>
+<p class="section-aside">Membangun, menghubungkan, dan memelihara sistem.</p>
+</div>
+<div class="experience-list">
+<article class="experience-entry"><div class="experience-meta">
+<span class="status">Posisi saat ini</span><p>September 2026 – sekarang</p>
+<span>Medan, Indonesia</span>
+</div>
+<div class="experience-content">
+<h3>Nusindo Training Center <span>(Nusindo Group)</span>
+</h3>
+<p class="role">Kepala AI Officer</p>
+<ul>
+<li>Memimpin divisi AI beranggotakan lima orang yang berperan sebagai AI champion di perusahaan-perusahaan dalam Nusindo Group; melatih staf memakai AI dan memberi pembaruan perkembangan AI secara berkala.</li>
+<li>Membangun Wella, agent AI WhatsApp yang melayani chat pelanggan 24 jam (WAHA, Docker, Gemini API).</li>
+<li>Membangun Portal AI Nusindo, orkestrator AI satu pintu untuk bot dan agent perusahaan di server kantor.</li>
+<li>Mengembangkan aplikasi Rekam Medis Elektronik (RME) untuk klinik grup (tahap penyelesaian), menuju integrasi SATUSEHAT.</li>
+<li>Menyusun skill Claude dan master prompt produksi eBook serta bank soal olimpiade.</li>
+<li>Mengelola server Linux kantor (sekitar 25 layanan) dari jarak jauh melalui SSH dan Tailscale.</li>
+</ul>
+<div class="scope-grid">
+<div>
+<strong>5</strong><span>AI champion di grup</span>
+</div>
+<div>
+<strong>~25</strong><span>Layanan server dikelola</span>
+</div>
+<div>
+<strong>24 jam</strong><span>Target layanan Wella</span>
+</div>
+</div>
+</div></article><article class="experience-entry"><div class="experience-meta">
+<span class="note-label">MAGANG</span><p>Januari – Maret 2026</p>
+</div>
+<div class="experience-content">
+<h3>PT Infratech Network Solusindo</h3>
+<p class="role">IT Support / Network Intern</p>
+<ul>
+<li>Penarikan kabel jaringan (network cabling) dan instalasi ducting.</li>
+<li>Merakit dan mengonfigurasi hardware access door control panel.</li>
+<li>Konfigurasi mesin absensi biometrik Solution X105.</li>
+<li>Troubleshooting hardware jaringan dan konektivitas harian.</li>
+<li>Dokumentasi kegiatan teknis (termasuk multimedia) melalui laporan.</li>
+</ul>
+<div class="intern-gallery">
+<figure><a class="screenshot" href="23%20Januari%201.jpeg" data-preview aria-label="Perbesar: Aktivitas instalasi saat magang"><img src="23%20Januari%201.jpeg" alt="Aktivitas instalasi saat magang" loading="lazy" width="1920" height="1080"><span class="zoom-label" aria-hidden="true">Lihat tampilan ↗</span></a></figure><figure><a class="screenshot" href="Hardware.jpeg" data-preview aria-label="Perbesar: Perakitan hardware access control"><img src="Hardware.jpeg" alt="Perakitan hardware access control" loading="lazy" width="1920" height="1080"><span class="zoom-label" aria-hidden="true">Lihat tampilan ↗</span></a></figure><figure><a class="screenshot" href="23%20Januari.jpeg" data-preview aria-label="Perbesar: Dokumentasi instalasi jaringan"><img src="23%20Januari.jpeg" alt="Dokumentasi instalasi jaringan" loading="lazy" width="1920" height="1080"><span class="zoom-label" aria-hidden="true">Lihat tampilan ↗</span></a></figure>
+</div>
+</div></article>
+</div>
+</div></section>
+<section id="projects" class="section"><div class="site-container">
+<div class="section-heading">
+<div>
+<p class="eyebrow">03 / PROYEK PILIHAN</p>
+<h2>Dibangun untuk<br><span>menyelesaikan masalah.</span>
+</h2>
+</div>
+<p class="section-aside">Dari agent percakapan sampai perangkat fisik.</p>
+</div>
+<div class="project-filters" hidden aria-label="Filter kategori proyek">
+<button class="filter active" data-filter="all" aria-pressed="true">Semua proyek</button><button class="filter" data-filter="AI Agents &amp; Automation" aria-pressed="false">AI Agents &amp; Automation</button><button class="filter" data-filter="Networking &amp; Infrastructure" aria-pressed="false">Networking &amp; Infrastructure</button><button class="filter" data-filter="Access Control &amp; Biometric" aria-pressed="false">Access Control &amp; Biometric</button><button class="filter" data-filter="Internet of Things (IoT)" aria-pressed="false">Internet of Things (IoT)</button>
+</div>
+<p id="project-count" class="sr-only" aria-live="polite"></p>
+<section class="project-group" data-project-group><div class="group-heading">
+<h3>AI Agents &amp; Automation</h3>
+<span>Agent · Orkestrasi · Produksi</span>
+</div>
+<div class="project-grid">
+<article id="wella" class="project-card featured" data-category="AI Agents &amp; Automation">
+ <figure><a class="screenshot" href="assets/images/wella-waha.png" data-preview aria-label="Perbesar: Dasbor WAHA untuk agent Wella"><img src="assets/images/wella-waha.png" alt="Dasbor WAHA untuk agent Wella" loading="lazy" width="1920" height="1080"><span class="zoom-label" aria-hidden="true">Lihat tampilan ↗</span></a><figcaption>Dokumentasi implementasi · Oktober 2026</figcaption></figure><div class="project-body">
+<div class="card-top"><span class="eyebrow">AI Agents &amp; Automation</span></div>
+ <h4>Wella — Agent AI WhatsApp 24 Jam</h4>
+<dl class="project-details">
+<div>
+<dt>Masalah</dt>
+<dd>Admin tidak bisa membalas chat pelanggan di luar jam kerja.</dd>
+</div>
+<div>
+<dt>Solusi</dt>
+<dd>Agent AI yang membalas dengan gaya admin manusia, membaca pesan media, dan dapat dilatih nomor admin terdaftar lewat chat.</dd>
+</div>
+<div>
+<dt>Teknologi</dt>
+<dd><div class="badges">
+<span>WAHA</span><span>Docker</span><span>Gemini API</span><span>Linux</span><span>Tailscale</span>
+</div></dd>
+</div>
+<div>
+<dt>Peran saya</dt>
+<dd>Merancang, membangun, dan memelihara seluruh sistem.</dd>
+</div>
+<div>
+<dt>Hasil</dt>
+<dd>Layanan pelanggan dirancang untuk berjalan 24 jam. <!-- TODO: angka nyata dampak Wella -->
+</dd>
+</div>
+<div>
+<dt>Tautan</dt>
+<dd>
+<a href="assets/images/wella-workflow.png" data-preview>Lihat alur otomasi ↗</a> <span class="link-note">Video demo menyusul.</span> <!-- TODO: video demo Wella -->
+</dd>
+</div>
+</dl>
+</div></article><article id="portal-ai" class="project-card " data-category="AI Agents &amp; Automation">
+ <figure><a class="screenshot" href="assets/images/portal-ai-nusindo.png" data-preview aria-label="Perbesar: Beranda Portal AI Nusindo"><img src="assets/images/portal-ai-nusindo.png" alt="Beranda Portal AI Nusindo" loading="lazy" width="1920" height="1080"><span class="zoom-label" aria-hidden="true">Lihat tampilan ↗</span></a></figure><div class="project-body">
+<div class="card-top"><span class="eyebrow">AI Agents &amp; Automation</span></div>
+ <h4>Portal AI Nusindo — Orkestrator AI</h4>
+<dl class="project-details">
+<div>
+<dt>Masalah</dt>
+<dd>Banyak bot dan agent di server kantor harus dibuka satu per satu dan hanya bisa diurus orang teknis.</dd>
+</div>
+<div>
+<dt>Solusi</dt>
+<dd>Dasbor satu pintu untuk memantau, mengonfigurasi, dan memberi basis pengetahuan ke semua bot/agent, dengan pilihan otak AI: Claude, GPT/Codex, atau LLM lokal via Ollama.</dd>
+</div>
+<div>
+<dt>Teknologi</dt>
+<dd><div class="badges">
+<span>Claude Code</span><span>Codex CLI</span><span>Ollama</span><span>Linux</span><span>systemd</span><span>tmux</span><span>Tailscale</span>
+</div></dd>
+</div>
+<div>
+<dt>Peran saya</dt>
+<dd>Perancang dan pembangun.</dd>
+</div>
+<div>
+<dt>Hasil</dt>
+<dd>Pengelolaan bot dan agent melalui satu dasbor. <!-- TODO: metrik hasil Portal AI Nusindo -->
+</dd>
+</div>
+<div>
+<dt>Tautan</dt>
+<dd>
+<a href="assets/images/portal-ai-nusindo.png" data-preview>Lihat dasbor ↗</a> <!-- TODO: diagram arsitektur / tangkapan layar Portal tersensor -->
+</dd>
+</div>
+</dl>
+</div></article><article id="rme" class="project-card " data-category="AI Agents &amp; Automation">
+ <figure><a class="screenshot" href="assets/images/rme-nusindo-demo.png" data-preview aria-label="Perbesar: Dasbor RME Nusindo dalam mode demo, bukan data pasien nyata"><img src="assets/images/rme-nusindo-demo.png" alt="Dasbor RME Nusindo dalam mode demo, bukan data pasien nyata" loading="lazy" width="1920" height="1080"><span class="zoom-label" aria-hidden="true">Lihat tampilan ↗</span></a><figcaption>Seluruh angka pada tampilan ini adalah data contoh.</figcaption></figure><div class="project-body">
+<div class="card-top">
+<span class="eyebrow">AI Agents &amp; Automation</span><span class="status">In Progress</span>
+</div>
+ <h4>RME Nusindo — Rekam Medis Elektronik</h4>
+<dl class="project-details">
+<div>
+<dt>Masalah</dt>
+<dd>Klinik grup bergantung pada sistem rekam medis komersial.</dd>
+</div>
+<div>
+<dt>Solusi</dt>
+<dd>Aplikasi RME yang dibangun dari nol, dirancang menuju integrasi SATUSEHAT.</dd>
+</div>
+<div>
+<dt>Teknologi</dt>
+<dd><div class="badges">
+<span>Claude Code</span><span>Codex</span><span>Linux server</span>
+</div></dd>
+</div>
+<div>
+<dt>Peran saya</dt>
+<dd>Perancang dan pembangun.</dd>
+</div>
+<div>
+<dt>Hasil</dt>
+<dd>Tahap penyelesaian; integrasi SATUSEHAT masih menjadi tujuan pengembangan.</dd>
+</div>
+<div>
+<dt>Tautan</dt>
+<dd><a href="assets/images/rme-nusindo-demo.png" data-preview>Lihat demo dengan data fiktif ↗</a></dd>
+</div>
+</dl>
+</div></article><article id="claude-skills" class="project-card " data-category="AI Agents &amp; Automation">
+ <figure><a class="screenshot" href="assets/images/portal-produksi.png" data-preview aria-label="Perbesar: Daftar produksi eBook dan bank soal di Portal Nusindo"><img src="assets/images/portal-produksi.png" alt="Daftar produksi eBook dan bank soal di Portal Nusindo" loading="lazy" width="1920" height="1080"><span class="zoom-label" aria-hidden="true">Lihat tampilan ↗</span></a></figure><div class="project-body">
+<div class="card-top"><span class="eyebrow">AI Agents &amp; Automation</span></div>
+ <h4>Skill Claude untuk Produksi eBook &amp; Bank Soal Olimpiade</h4>
+<dl class="project-details">
+<div>
+<dt>Masalah</dt>
+<dd>Produksi eBook dan bank soal dikerjakan manual dan formatnya tidak seragam.</dd>
+</div>
+<div>
+<dt>Solusi</dt>
+<dd>Skill Claude (ebook-profesional, ebook-pelajar, soal-olimpiade) dan master prompt v2 mengikuti standar tata letak Nusindo Press. Format bank soal: 40 soal, 10 topik, opsi A–E, sebaran 12 Mudah/20 Sedang/8 Sulit, diturunkan dari analisis 440 soal terbitan.</dd>
+</div>
+<div>
+<dt>Teknologi</dt>
+<dd><div class="badges">
+<span>Claude Skills</span><span>ChatGPT Projects</span><span>Prompt engineering</span>
+</div></dd>
+</div>
+<div>
+<dt>Peran saya</dt>
+<dd>Menyusun skill Claude dan master prompt produksi.</dd>
+</div>
+<div>
+<dt>Hasil</dt>
+<dd>eBook 22 halaman yang layak terbit. <!-- TODO: waktu produksi sebelum vs sesudah -->
+</dd>
+</div>
+<div>
+<dt>Tautan</dt>
+<dd><a href="assets/images/portal-produksi.png" data-preview>Lihat ruang produksi ↗</a></dd>
+</div>
+</dl>
+</div></article><article id="meddy" class="project-card " data-category="AI Agents &amp; Automation">
+ <figure><a class="screenshot" href="Koding%20Chatbot.png" data-preview aria-label="Perbesar: Dokumentasi kode Python chatbot Meddy"><img src="Koding%20Chatbot.png" alt="Dokumentasi kode Python chatbot Meddy" loading="lazy" width="1920" height="1080"><span class="zoom-label" aria-hidden="true">Lihat tampilan ↗</span></a></figure><div class="project-body">
+<div class="card-top"><span class="eyebrow">AI Agents &amp; Automation</span></div>
+ <h4>Chatbot “Meddy”</h4>
+<dl class="project-details">
+<div>
+<dt>Masalah</dt>
+<dd>Kebutuhan sistem layanan pelanggan Medsense.</dd>
+</div>
+<div>
+<dt>Solusi</dt>
+<dd>Chatbot hybrid yang menggabungkan struktur logika statis, klasifikasi intent dengan Machine Learning (Naive Bayes), dan Generative AI (LLM Gemini) untuk memberikan respons yang natural dan akurat. Dibangun menggunakan Python.</dd>
+</div>
+<div>
+<dt>Teknologi</dt>
+<dd><div class="badges">
+<span>Python</span><span>Gemini API</span><span>Scikit-learn</span>
+</div></dd>
+</div>
+<div>
+<dt>Peran saya</dt>
+<dd>Pengembang chatbot.</dd>
+</div>
+<div>
+<dt>Hasil</dt>
+<dd>Sistem Layanan Pelanggan Medsense. <!-- TODO: metrik hasil Meddy -->
+</dd>
+</div>
+<div>
+<dt>Tautan</dt>
+<dd><a href="Koding%20Chatbot.png" data-preview>Lihat dokumentasi kode ↗</a></dd>
+</div>
+</dl>
+</div></article>
+</div></section><section class="project-group" data-project-group><div class="group-heading">
+<h3>Networking &amp; Infrastructure</h3>
+<span>Implementasi lapangan</span>
+</div>
+<article id="networking" class="project-card legacy-card" data-category="Networking &amp; Infrastructure">
+ <div class="legacy-media">
+<figure><a class="screenshot" href="06%20Februari%201.jpeg" data-preview aria-label="Perbesar: Networking &amp; Infrastructure — dokumentasi 1"><img src="06%20Februari%201.jpeg" alt="Networking &amp; Infrastructure — dokumentasi 1" loading="lazy" width="1920" height="1080"><span class="zoom-label" aria-hidden="true">Lihat tampilan ↗</span></a></figure><figure><a class="screenshot" href="10%20Februari%202.jpeg" data-preview aria-label="Perbesar: Networking &amp; Infrastructure — dokumentasi 2"><img src="10%20Februari%202.jpeg" alt="Networking &amp; Infrastructure — dokumentasi 2" loading="lazy" width="1920" height="1080"><span class="zoom-label" aria-hidden="true">Lihat tampilan ↗</span></a></figure>
+</div>
+<div class="project-body">
+<div class="card-top"><span class="eyebrow">Networking &amp; Infrastructure</span></div>
+ <h4>Networking &amp; Infrastructure</h4>
+<dl class="project-details">
+<div>
+<dt>Masalah</dt>
+<dd>Kebutuhan instalasi dan pengelolaan infrastruktur jaringan.</dd>
+</div>
+<div>
+<dt>Solusi</dt>
+<dd>Pengalaman langsung (hands-on) dalam membangun dan menata infrastruktur fisik jaringan. Mencakup instalasi ducting, penarikan kabel LAN, hingga setup awal perangkat jaringan. Selain fisik, saya juga menangani manajemen jaringan logika seperti MikroTik Hotspot &amp; Voucher Management (Mikhmon) untuk menyediakan akses internet tersentralisasi bagi klien.</dd>
+</div>
+<div>
+<dt>Teknologi</dt>
+<dd><div class="badges">
+<span>Cabling</span><span>MikroTik</span><span>Mikhmon</span><span>Ruijie/Reyee</span>
+</div></dd>
+</div>
+<div>
+<dt>Peran saya</dt>
+<dd>Instalasi dan konfigurasi jaringan.</dd>
+</div>
+<div>
+<dt>Hasil</dt>
+<dd>Dokumentasi implementasi tersedia pada galeri proyek.</dd>
+</div>
+<div>
+<dt>Tautan</dt>
+<dd><a href="06%20Februari%201.jpeg" data-preview>Lihat dokumentasi ↗</a></dd>
+</div>
+</dl>
+</div></article></section><section class="project-group" data-project-group><div class="group-heading">
+<h3>Access Control &amp; Biometric</h3>
+<span>Implementasi lapangan</span>
+</div>
+<article id="access-control" class="project-card legacy-card" data-category="Access Control &amp; Biometric">
+ <div class="legacy-media">
+<figure><a class="screenshot" href="12%20Januari.jpeg" data-preview aria-label="Perbesar: Access Control &amp; Biometric — dokumentasi 1"><img src="12%20Januari.jpeg" alt="Access Control &amp; Biometric — dokumentasi 1" loading="lazy" width="1920" height="1080"><span class="zoom-label" aria-hidden="true">Lihat tampilan ↗</span></a></figure><figure><a class="screenshot" href="Access%20door.jpeg" data-preview aria-label="Perbesar: Access Control &amp; Biometric — dokumentasi 2"><img src="Access%20door.jpeg" alt="Access Control &amp; Biometric — dokumentasi 2" loading="lazy" width="1920" height="1080"><span class="zoom-label" aria-hidden="true">Lihat tampilan ↗</span></a></figure>
+</div>
+<div class="project-body">
+<div class="card-top"><span class="eyebrow">Access Control &amp; Biometric</span></div>
+ <h4>Access Control &amp; Biometric</h4>
+<dl class="project-details">
+<div>
+<dt>Masalah</dt>
+<dd>Kebutuhan instalasi sistem akses dan absensi biometrik.</dd>
+</div>
+<div>
+<dt>Solusi</dt>
+<dd>Terlibat intensif dalam perakitan panel kontrol (control panel) untuk sistem keamanan, instalasi fisik di lokasi proyek (misal: Rumah Sakit), serta pengujian interkom IP. Hikvision IP Intercom Setup; Solution X105 Biometric Config; Access Door Panel Assembly.</dd>
+</div>
+<div>
+<dt>Teknologi</dt>
+<dd><div class="badges">
+<span>Hikvision IP Intercom</span><span>Solution X105</span><span>Access Door</span>
+</div></dd>
+</div>
+<div>
+<dt>Peran saya</dt>
+<dd>Perakitan, instalasi, konfigurasi, dan pengujian.</dd>
+</div>
+<div>
+<dt>Hasil</dt>
+<dd>Dokumentasi implementasi tersedia pada galeri proyek.</dd>
+</div>
+<div>
+<dt>Tautan</dt>
+<dd><a href="12%20Januari.jpeg" data-preview>Lihat dokumentasi ↗</a></dd>
+</div>
+</dl>
+</div></article></section><section class="project-group" data-project-group><div class="group-heading">
+<h3>Internet of Things (IoT)</h3>
+<span>Implementasi lapangan</span>
+</div>
+<article id="iot" class="project-card legacy-card" data-category="Internet of Things (IoT)">
+ <div class="legacy-media">
+<figure><a class="screenshot" href="Led%20Biru.jpeg" data-preview aria-label="Perbesar: Internet of Things (IoT) — dokumentasi 1"><img src="Led%20Biru.jpeg" alt="Internet of Things (IoT) — dokumentasi 1" loading="lazy" width="1920" height="1080"><span class="zoom-label" aria-hidden="true">Lihat tampilan ↗</span></a></figure><figure><a class="screenshot" href="Led%20kuning.jpeg" data-preview aria-label="Perbesar: Internet of Things (IoT) — dokumentasi 2"><img src="Led%20kuning.jpeg" alt="Internet of Things (IoT) — dokumentasi 2" loading="lazy" width="1920" height="1080"><span class="zoom-label" aria-hidden="true">Lihat tampilan ↗</span></a></figure><figure><a class="screenshot" href="Led%20Merah.jpeg" data-preview aria-label="Perbesar: Internet of Things (IoT) — dokumentasi 3"><img src="Led%20Merah.jpeg" alt="Internet of Things (IoT) — dokumentasi 3" loading="lazy" width="1920" height="1080"><span class="zoom-label" aria-hidden="true">Lihat tampilan ↗</span></a></figure>
+</div>
+<div class="project-body">
+<div class="card-top"><span class="eyebrow">Internet of Things (IoT)</span></div>
+ <h4>Medicine Storage Monitor</h4>
+<dl class="project-details">
+<div>
+<dt>Masalah</dt>
+<dd>Pemantauan suhu dan kelembapan ruang penyimpanan obat.</dd>
+</div>
+<div>
+<dt>Solusi</dt>
+<dd>Sistem IoT berbasis ESP32/Mikrokontroler untuk memonitor kondisi ruang penyimpanan obat (suhu &amp; kelembapan) secara real-time. Memiliki mekanisme peringatan kondisi melalui indikator LED dan pengiriman data.</dd>
+</div>
+<div>
+<dt>Teknologi</dt>
+<dd><div class="badges">
+<span>ESP32</span><span>Mikrokontroler</span><span>LED</span><span>IoT</span>
+</div></dd>
+</div>
+<div>
+<dt>Peran saya</dt>
+<dd>Pengembangan sistem pemantauan.</dd>
+</div>
+<div>
+<dt>Hasil</dt>
+<dd>Indikator kondisi: Dingin (biru), Normal (kuning), dan Panas (merah).</dd>
+</div>
+<div>
+<dt>Tautan</dt>
+<dd><a href="Led%20Biru.jpeg" data-preview>Lihat dokumentasi ↗</a></dd>
+</div>
+</dl>
+</div></article></section>
+</div></section>
+<section class="section section-muted"><div class="site-container multimedia">
+<div>
+<p class="eyebrow">04 / MULTIMEDIA</p>
+<h2>Teknis, dengan<br><span>perspektif visual.</span>
+</h2>
+<p>Memiliki kemampuan desain identitas visual dan produksi konten digital (Video/Image Editing), memberikan nilai tambah dalam hal presentasi visual dan UI/UX untuk setiap proyek sistem yang saya kerjakan.</p>
+</div>
+<div class="multimedia-art">
+<figure><a class="screenshot" href="Logo.jpg" data-preview aria-label="Perbesar: Desain identitas visual dua dimensi"><img src="Logo.jpg" alt="Desain identitas visual dua dimensi" loading="lazy" width="1920" height="1080"><span class="zoom-label" aria-hidden="true">Lihat tampilan ↗</span></a></figure><figure><a class="screenshot" href="Logo%203D.jpg" data-preview aria-label="Perbesar: Desain logo tiga dimensi"><img src="Logo%203D.jpg" alt="Desain logo tiga dimensi" loading="lazy" width="1920" height="1080"><span class="zoom-label" aria-hidden="true">Lihat tampilan ↗</span></a></figure>
+</div>
+</div></section>
+<section id="certificates" class="section"><div class="site-container">
+<div class="section-heading">
+<div>
+<p class="eyebrow">05 / PEMBELAJARAN</p>
+<h2>Certificates<br><span>&amp; Badges.</span>
+</h2>
+</div>
+<p class="section-aside">Belajar berkelanjutan, dari jaringan hingga AI.</p>
+</div>
+<div class="cert-toolbar">
+<p>Sertifikat dengan bukti tersedia dapat dibuka. Entri lainnya menunggu penautan bukti.</p>
+<div class="cert-search-wrap" hidden>
+<label class="sr-only" for="certificate-search">Cari sertifikat atau penerbit</label><input type="search" id="certificate-search" placeholder="Cari sertifikat atau penerbit…" autocomplete="off">
+</div>
+</div>
+<div class="cert-grid">
+<div class="certificate-item" data-search="ef set certificate ef standard english test"><a class="certificate" href="EF%20SET%20Certificate%20(1).pdf" target="_blank" rel="noopener noreferrer"><span class="cert-mark" aria-hidden="true">EF</span><div>
+<h3>EF SET Certificate</h3>
+<p>EF Standard English Test</p>
+<span class="cert-link">Lihat sertifikat ↗</span>
+</div></a></div>
+<div class="certificate-item" data-search="networking basics cisco"><a class="certificate" href="NetworkingBasicsUpdate20251104-30-pjg1so.pdf" target="_blank" rel="noopener noreferrer"><span class="cert-mark" aria-hidden="true">CIS</span><div>
+<h3>Networking Basics</h3>
+<p>Cisco</p>
+<span class="cert-link">Lihat sertifikat ↗</span>
+</div></a></div>
+<!-- CEK: belum ada tautan --><!-- CEK: berkas rujukan lama tidak ditemukan: build-an-ai-agent.png --><div class="certificate-item" data-search="build an ai agent ibm skillsbuild"><article class="certificate"><span class="cert-mark" aria-hidden="true">IBM</span><div>
+<h3>Build an AI Agent</h3>
+<p>IBM SkillsBuild</p>
+<span class="cert-link">Bukti belum ditautkan</span>
+</div></article></div>
+<div class="certificate-item" data-search="ibm granite models for software development ibm skillsbuild"><a class="certificate" href="IBM%20Granite%20Models%20For%20Software%20Development.pdf" target="_blank" rel="noopener noreferrer"><span class="cert-mark" aria-hidden="true">IBM</span><div>
+<h3>IBM Granite Models for Software Development</h3>
+<p>IBM SkillsBuild</p>
+<span class="cert-link">Lihat sertifikat ↗</span>
+</div></a></div>
+<div class="certificate-item" data-search="introduction to large language models ibm skillsbuild"><a class="certificate" href="IBM%20Introducing%20LLM.pdf" target="_blank" rel="noopener noreferrer"><span class="cert-mark" aria-hidden="true">IBM</span><div>
+<h3>Introduction to Large Language Models</h3>
+<p>IBM SkillsBuild</p>
+<span class="cert-link">Lihat sertifikat ↗</span>
+</div></a></div>
+<div class="certificate-item" data-search="lab: troubleshoot your code using ibm bob ibm skillsbuild"><a class="certificate" href="IBM%20Lab%20Troubles%20Your%20Code.pdf" target="_blank" rel="noopener noreferrer"><span class="cert-mark" aria-hidden="true">IBM</span><div>
+<h3>Lab: Troubleshoot Your Code Using IBM Bob</h3>
+<p>IBM SkillsBuild</p>
+<span class="cert-link">Lihat sertifikat ↗</span>
+</div></a></div>
+<!-- CEK: belum ada tautan --><!-- CEK: berkas rujukan lama tidak ditemukan: IBM Intelligent by design.pdf --><div class="certificate-item" data-search="intelligent by design ibm"><article class="certificate"><span class="cert-mark" aria-hidden="true">IBM</span><div>
+<h3>Intelligent by design</h3>
+<p>IBM</p>
+<span class="cert-link">Bukti belum ditautkan</span>
+</div></article></div>
+<!-- CEK: belum ada tautan --><div class="certificate-item" data-search="iot fundamentals cisco"><article class="certificate"><span class="cert-mark" aria-hidden="true">CIS</span><div>
+<h3>IoT Fundamentals</h3>
+<p>Cisco</p>
+<span class="cert-link">Bukti belum ditautkan</span>
+</div></article></div>
+<!-- CEK: belum ada tautan --><div class="certificate-item" data-search="cybersecurity essentials cisco"><article class="certificate"><span class="cert-mark" aria-hidden="true">CIS</span><div>
+<h3>Cybersecurity Essentials</h3>
+<p>Cisco</p>
+<span class="cert-link">Bukti belum ditautkan</span>
+</div></article></div>
+<!-- CEK: belum ada tautan --><div class="certificate-item" data-search="python for data science ibm"><article class="certificate"><span class="cert-mark" aria-hidden="true">IBM</span><div>
+<h3>Python for Data Science</h3>
+<p>IBM</p>
+<span class="cert-link">Bukti belum ditautkan</span>
+</div></article></div>
+<!-- CEK: belum ada tautan --><div class="certificate-item" data-search="cloud computing core ibm"><article class="certificate"><span class="cert-mark" aria-hidden="true">IBM</span><div>
+<h3>Cloud Computing Core</h3>
+<p>IBM</p>
+<span class="cert-link">Bukti belum ditautkan</span>
+</div></article></div>
+<!-- CEK: belum ada tautan --><div class="certificate-item" data-search="network defense cisco"><article class="certificate"><span class="cert-mark" aria-hidden="true">CIS</span><div>
+<h3>Network Defense</h3>
+<p>Cisco</p>
+<span class="cert-link">Bukti belum ditautkan</span>
+</div></article></div>
+<!-- CEK: belum ada tautan --><div class="certificate-item" data-search="agile explorer ibm"><article class="certificate"><span class="cert-mark" aria-hidden="true">IBM</span><div>
+<h3>Agile Explorer</h3>
+<p>IBM</p>
+<span class="cert-link">Bukti belum ditautkan</span>
+</div></article></div>
+<!-- CEK: belum ada tautan --><div class="certificate-item" data-search="enterprise design thinking ibm"><article class="certificate"><span class="cert-mark" aria-hidden="true">IBM</span><div>
+<h3>Enterprise Design Thinking</h3>
+<p>IBM</p>
+<span class="cert-link">Bukti belum ditautkan</span>
+</div></article></div>
+<!-- CEK: belum ada tautan --><div class="certificate-item" data-search="data analytics essentials google"><article class="certificate"><span class="cert-mark" aria-hidden="true">GOO</span><div>
+<h3>Data Analytics Essentials</h3>
+<p>Google</p>
+<span class="cert-link">Bukti belum ditautkan</span>
+</div></article></div>
+<!-- CEK: belum ada tautan --><div class="certificate-item" data-search="ndg linux unhatched cisco / ndg"><article class="certificate"><span class="cert-mark" aria-hidden="true">CIS</span><div>
+<h3>NDG Linux Unhatched</h3>
+<p>Cisco / NDG</p>
+<span class="cert-link">Bukti belum ditautkan</span>
+</div></article></div>
+<!-- CEK: belum ada tautan --><div class="certificate-item" data-search="hardware assembly &amp; network infratech"><article class="certificate"><span class="cert-mark" aria-hidden="true">INF</span><div>
+<h3>Hardware Assembly &amp; Network</h3>
+<p>Infratech</p>
+<span class="cert-link">Bukti belum ditautkan</span>
+</div></article></div>
+<!-- CEK: belum ada tautan --><div class="certificate-item" data-search="access control systems hikvision"><article class="certificate"><span class="cert-mark" aria-hidden="true">HIK</span><div>
+<h3>Access Control Systems</h3>
+<p>Hikvision</p>
+<span class="cert-link">Bukti belum ditautkan</span>
+</div></article></div>
+<!-- CEK: belum ada tautan --><div class="certificate-item" data-search="it infrastructure planning comptia"><article class="certificate"><span class="cert-mark" aria-hidden="true">COM</span><div>
+<h3>IT Infrastructure Planning</h3>
+<p>CompTIA</p>
+<span class="cert-link">Bukti belum ditautkan</span>
+</div></article></div>
+<!-- CEK: belum ada tautan --><div class="certificate-item" data-search="job readiness &amp; soft skills ibm skillsbuild"><article class="certificate"><span class="cert-mark" aria-hidden="true">IBM</span><div>
+<h3>Job Readiness &amp; Soft Skills</h3>
+<p>IBM SkillsBuild</p>
+<span class="cert-link">Bukti belum ditautkan</span>
+</div></article></div>
+<!-- TODO: tambahkan tautan sertifikat --><div class="certificate-item" data-search="belajar dasar ai dicoding · nov 2025"><article class="certificate"><span class="cert-mark" aria-hidden="true">DIC</span><div>
+<h3>Belajar Dasar AI</h3>
+<p>Dicoding · Nov 2025</p>
+<span class="cert-link">Bukti belum ditautkan</span>
+</div></article></div>
+<!-- TODO: tambahkan tautan sertifikat --><div class="certificate-item" data-search="belajar dasar data science dicoding · nov 2025"><article class="certificate"><span class="cert-mark" aria-hidden="true">DIC</span><div>
+<h3>Belajar Dasar Data Science</h3>
+<p>Dicoding · Nov 2025</p>
+<span class="cert-link">Bukti belum ditautkan</span>
+</div></article></div>
+<!-- TODO: tambahkan tautan sertifikat --><div class="certificate-item" data-search="belajar dasar sql dicoding · nov 2025"><article class="certificate"><span class="cert-mark" aria-hidden="true">DIC</span><div>
+<h3>Belajar Dasar SQL</h3>
+<p>Dicoding · Nov 2025</p>
+<span class="cert-link">Bukti belum ditautkan</span>
+</div></article></div>
+<!-- TODO: tambahkan tautan sertifikat --><div class="certificate-item" data-search="belajar dasar visualisasi data dicoding · nov 2025"><article class="certificate"><span class="cert-mark" aria-hidden="true">DIC</span><div>
+<h3>Belajar Dasar Visualisasi Data</h3>
+<p>Dicoding · Nov 2025</p>
+<span class="cert-link">Bukti belum ditautkan</span>
+</div></article></div>
+<!-- TODO: tambahkan tautan sertifikat --><div class="certificate-item" data-search="prompt engineering untuk software developer dicoding · okt 2025"><article class="certificate"><span class="cert-mark" aria-hidden="true">DIC</span><div>
+<h3>Prompt Engineering untuk Software Developer</h3>
+<p>Dicoding · Okt 2025</p>
+<span class="cert-link">Bukti belum ditautkan</span>
+</div></article></div>
+<!-- TODO: tambahkan tautan sertifikat --><div class="certificate-item" data-search="belajar penggunaan generative ai dicoding · okt 2025"><article class="certificate"><span class="cert-mark" aria-hidden="true">DIC</span><div>
+<h3>Belajar Penggunaan Generative AI</h3>
+<p>Dicoding · Okt 2025</p>
+<span class="cert-link">Bukti belum ditautkan</span>
+</div></article></div>
+<!-- TODO: tambahkan tautan sertifikat --><div class="certificate-item" data-search="operating systems support cisco networking academy · nov 2025"><article class="certificate"><span class="cert-mark" aria-hidden="true">CIS</span><div>
+<h3>Operating Systems Support</h3>
+<p>Cisco Networking Academy · Nov 2025</p>
+<span class="cert-link">Bukti belum ditautkan</span>
+</div></article></div>
+</div>
+<p id="cert-count" class="cert-count" aria-live="polite"></p>
+</div></section>
+<section id="contact" class="contact-section"><div class="site-container">
+<p class="eyebrow">06 / MARI TERHUBUNG</p>
+<div class="contact-heading">
+<h2>Punya ide?<br><span>Mari bangun bersama.</span>
+</h2>
+<a href="mailto:danielhalomoan10@gmail.com" class="contact-arrow" aria-label="Kirim email ke Daniel">↗</a>
+</div>
+<p class="contact-copy">Terbuka untuk berdiskusi dan berkolaborasi di bidang AI Engineering, Automation, Networking, dan IoT.</p>
+<div class="contact-links">
+<a href="mailto:danielhalomoan10@gmail.com">danielhalomoan10@gmail.com ↗</a><a href="tel:+6282165071057">0821-6507-1057 ↗</a><a href="https://linkedin.com/in/daniel-halomoan-siregar-21941a338" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/daniel100703" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+</div>
+<div class="cv-row">
+<a class="button button-primary" href="cv/CV_Daniel_Halomoan_Siregar.pdf" download aria-describedby="cv-status">Download CV ↓</a><p id="cv-status">PDF CV akan segera tersedia.</p>
+<!-- TODO: unggah cv/CV_Daniel_Halomoan_Siregar.pdf -->
+</div>
+</div></section>
+</main><footer><div class="site-container footer-row">
+<a class="brand" href="#home">DANIEL<span class="accent">.IT</span></a><p>© 2026 Daniel Halomoan Siregar · HTML &amp; Tailwind CSS</p>
+<a href="#home">Kembali ke atas ↑</a>
+</div></footer>
+<dialog id="image-dialog" aria-labelledby="preview-caption"><div class="dialog-header">
+<p id="preview-caption"></p>
+<button id="close-preview" aria-label="Tutup pratinjau gambar">Tutup ×</button>
+</div>
+<img id="preview-image" alt=""></dialog>
 </body>
 </html>
