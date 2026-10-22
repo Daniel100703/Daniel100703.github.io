@@ -1,7 +1,5 @@
 # CV Daniel Halomoan Siregar
 
-PDF CV akan diunggah sendiri oleh pemilik portofolio.
+PDF CV sudah tersedia sebagai `CV_Daniel_Halomoan_Siregar.pdf`, berasal dari file yang diunggah pemilik. Tombol **Download CV** di header dan kontak mengarah ke file ini.
 
-Unggah file dengan nama persis `CV_Daniel_Halomoan_Siregar.pdf` ke folder `cv/`. Tombol **Download CV** di header dan kontak sudah mengarah ke file tersebut. Setelah diunggah, hapus pemberitahuan “PDF CV akan segera tersedia” pada `#cv-status` dan komentar TODO terkait di `index.html`.
-
-Berkas DOCX yang dilampirkan tidak dikonversi otomatis, sesuai permintaan pemilik.
+Untuk memperbarui CV, ganti file PDF pada path yang sama agar tautan tetap berlaku. File sumber disalin apa adanya tanpa konversi atau perubahan isi.
