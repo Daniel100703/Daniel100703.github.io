@@ -12,7 +12,7 @@ Jalankan `python3 -m http.server 8000` dari direktori ini, lalu buka http://loca
 - `assets/styles.css`: desain responsif dan reduced motion.
 - `assets/main.js`: navigasi seluler, filter proyek, pencarian sertifikat, dan pratinjau gambar.
 - `assets/images/`: foto formal dari CV dan tangkapan layar yang disediakan pemilik.
-- `cv/README.md`: instruksi mengunggah PDF CV.
+- `cv/README.md`: informasi PDF CV dan cara memperbaruinya.
 
 ## Pembaruan
 
@@ -36,3 +36,9 @@ RME masih dalam pengembangan; screenshot yang disertakan secara eksplisit bertan
 | `server-sftp-detail.png` | Dokumentasi folder server tambahan |
 
 Seluruh sembilan tangkapan layar asli disimpan; galeri utama menampilkan yang relevan dengan studi kasus. Dokumentasi SFTP tersimpan sebagai aset tambahan. Gambar sumber tidak diubah atau diklaim telah disensor.
+
+## Bukti sertifikat dan CV
+
+PDF CV sudah tersedia di `cv/CV_Daniel_Halomoan_Siregar.pdf`. Tautan tujuh sertifikat Dicoding/Cisco dan dua entri IBM sudah dilengkapi dari PDF yang diberikan pemilik. Tiga sertifikat webinar Kemnaker dan satu sertifikat kompetensi multimedia ditambahkan sebagai entri tersendiri.
+
+Entri `Build an AI Agent` dan `Intelligent by Design: Build an AI Agent` memakai satu bukti yang sama; keduanya dipertahankan untuk keputusan pemilik. Entri lama lain yang belum memiliki bukti tetap ditandai CEK. Sertifikat Kemnaker tersimpan dalam `certificates/`; PDF yang sudah ada di root digunakan kembali tanpa duplikasi.
