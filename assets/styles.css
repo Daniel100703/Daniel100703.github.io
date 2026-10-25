@@ -762,54 +762,103 @@ figcaption {
 .legacy-card h4 {
   margin-top:0
 }
-.multimedia {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:90px;
-  align-items:start
+.danimoan-section {
+  background:radial-gradient(circle at 85% 18%, #ef6a2021, transparent 35%), #0e151a
 }
-.multimedia .eyebrow {
-  margin-bottom:18px
+.danimoan-heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:40px;
+  margin-bottom:34px
 }
-.multimedia p:not(.eyebrow) {
-  color:var(--muted);
+.danimoan-heading .eyebrow {margin-bottom:12px}
+.danimoan-heading h2 {
+  font-size:clamp(48px,8vw,112px);
+  line-height:1;
+  font-weight:800;
+  letter-spacing:-.075em;
+  color:#fff
+}
+.danimoan-period {color:#ff8a38}
+.danimoan-heading>p {
+  max-width:390px;
+  color:#b8c1c0;
   font-size:13px;
-  line-height:1.9;
-  max-width:450px;
-  margin-top:23px
+  line-height:1.85
 }
-.multimedia-art {
+.danimoan-showcase {
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:repeat(2,minmax(0,1fr)) minmax(230px,.85fr);
   gap:16px
 }
-.multimedia-art .screenshot {
-  border:1px solid var(--line);
-  border-radius:16px
+.danimoan-showcase figure {
+  min-width:0;
+  overflow:hidden;
+  border:1px solid #ffffff1c;
+  border-radius:18px;
+  background:#151e23
 }
-.multimedia-art img {
-  aspect-ratio:1;
-  object-fit:cover
+.danimoan-showcase figcaption {
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+  padding:15px 18px 18px
 }
-.multimedia-art figure {
-  min-width:0
+.danimoan-showcase figcaption span {
+  color:#ffab6a;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.16em
 }
-.multimedia-art figcaption {
-  margin-top:8px;
-  color:var(--muted);
-  font-size:10px;
-  line-height:1.5
+.danimoan-showcase figcaption strong {
+  color:#fff;
+  font-size:15px;
+  font-weight:600
 }
-.multimedia-video {
-  grid-column:1/-1
+.danimoan-showcase figcaption small {color:#aab6b4;font-size:10px}
+.danimoan-showcase .screenshot {border:0}
+.danimoan-film {grid-column:span 2;grid-row:span 2}
+.danimoan-film-frame {
+  padding:12px;
+  background:linear-gradient(125deg,#ec330f,#ff9a1d 60%,#ac2514)
 }
-.multimedia-video video {
+.danimoan-film video {
   display:block;
   width:100%;
   aspect-ratio:16/9;
-  background:#080c10;
-  border:1px solid var(--line);
-  border-radius:16px
+  background:#130d0b;
+  border-radius:9px
+}
+.danimoan-portrait {grid-column:3;grid-row:span 2}
+.danimoan-portrait img {
+  display:block;
+  width:100%;
+  height:100%;
+  max-height:390px;
+  aspect-ratio:3/4;
+  object-fit:cover
+}
+.danimoan-logo img {
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover
+}
+.danimoan-logo .zoom-label,.danimoan-portrait .zoom-label {font-size:8px}
+@media(max-width:850px) {
+  .danimoan-heading {align-items:start;flex-direction:column;gap:16px}
+  .danimoan-showcase {grid-template-columns:repeat(2,minmax(0,1fr))}
+  .danimoan-film {grid-column:1/-1;grid-row:auto}
+  .danimoan-portrait {grid-column:1/-1;grid-row:auto}
+  .danimoan-portrait img {max-height:360px;object-position:center 30%}
+}
+@media(max-width:540px) {
+  .danimoan-heading h2 {font-size:clamp(44px,13vw,70px)}
+  .danimoan-showcase {gap:10px}
+  .danimoan-film-frame {padding:6px}
+  .danimoan-showcase figcaption {padding:12px}
+  .danimoan-showcase figcaption strong {font-size:12px}
+  .danimoan-logo .zoom-label {display:none}
 }
 .cert-toolbar {
   display:flex;
