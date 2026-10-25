@@ -766,7 +766,7 @@ figcaption {
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:90px;
-  align-items:center
+  align-items:start
 }
 .multimedia .eyebrow {
   margin-bottom:18px
@@ -790,6 +790,26 @@ figcaption {
 .multimedia-art img {
   aspect-ratio:1;
   object-fit:cover
+}
+.multimedia-art figure {
+  min-width:0
+}
+.multimedia-art figcaption {
+  margin-top:8px;
+  color:var(--muted);
+  font-size:10px;
+  line-height:1.5
+}
+.multimedia-video {
+  grid-column:1/-1
+}
+.multimedia-video video {
+  display:block;
+  width:100%;
+  aspect-ratio:16/9;
+  background:#080c10;
+  border:1px solid var(--line);
+  border-radius:16px
 }
 .cert-toolbar {
   display:flex;
