@@ -789,7 +789,7 @@ figcaption {
 }
 .danimoan-showcase {
   display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr)) minmax(230px,.85fr);
+  grid-template-columns:repeat(4,minmax(0,1fr));
   gap:16px
 }
 .danimoan-showcase figure {
@@ -818,7 +818,7 @@ figcaption {
 }
 .danimoan-showcase figcaption small {color:#aab6b4;font-size:10px}
 .danimoan-showcase .screenshot {border:0}
-.danimoan-film {grid-column:span 2;grid-row:span 2}
+.danimoan-film {grid-column:span 3}
 .danimoan-film-frame {
   padding:12px;
   background:linear-gradient(125deg,#ec330f,#ff9a1d 60%,#ac2514)
@@ -830,15 +830,16 @@ figcaption {
   background:#130d0b;
   border-radius:9px
 }
-.danimoan-portrait {grid-column:3;grid-row:span 2}
+.danimoan-portrait {grid-column:4;display:flex;flex-direction:column}
+.danimoan-portrait .screenshot {flex:1;min-height:0}
 .danimoan-portrait img {
   display:block;
   width:100%;
   height:100%;
-  max-height:390px;
   aspect-ratio:3/4;
   object-fit:cover
 }
+.danimoan-logo {grid-column:span 2}
 .danimoan-logo img {
   width:100%;
   aspect-ratio:16/9;
@@ -850,7 +851,9 @@ figcaption {
   .danimoan-showcase {grid-template-columns:repeat(2,minmax(0,1fr))}
   .danimoan-film {grid-column:1/-1;grid-row:auto}
   .danimoan-portrait {grid-column:1/-1;grid-row:auto}
-  .danimoan-portrait img {max-height:360px;object-position:center 30%}
+  .danimoan-portrait .screenshot {flex:none}
+  .danimoan-portrait img {height:auto;max-height:360px;object-position:center 30%}
+  .danimoan-logo {grid-column:span 1}
 }
 @media(max-width:540px) {
   .danimoan-heading h2 {font-size:clamp(44px,13vw,70px)}
