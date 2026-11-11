@@ -1558,3 +1558,29 @@ body.preview-open {
     transition:none!important
   }
 }
+
+/* Nusindo.id platform: overview first, supporting screens in a compact gallery. */
+.web-platform-card .platform-cover .screenshot img {
+  width:100%;
+  aspect-ratio:1917/962;
+  object-fit:contain;
+}
+.web-platform-card .platform-gallery {
+  grid-column:1/-1;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+  padding:0 24px 24px;
+}
+.platform-gallery figure {min-width:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg)}
+.platform-gallery .screenshot img {aspect-ratio:16/10;object-fit:cover;object-position:top center}
+.platform-gallery figcaption {font-size:10px;padding:10px 12px}
+@media(max-width:850px) {
+  .web-platform-card .platform-gallery {grid-template-columns:repeat(2,minmax(0,1fr));padding:0 18px 18px}
+}
+@media(max-width:640px) {
+  .web-platform-card .platform-cover .screenshot img {aspect-ratio:1917/962;object-fit:contain}
+  .web-platform-card .platform-gallery {gap:8px;padding:0 12px 16px}
+  .platform-gallery figcaption {font-size:9px}
+  .platform-gallery .zoom-label {display:none}
+}
