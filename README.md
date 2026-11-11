@@ -1,10 +1,10 @@
 # Portofolio Daniel Halomoan Siregar
 
-Portofolio statis berbahasa Indonesia untuk GitHub Pages, menggunakan HTML, Tailwind CSS, CSS, dan JavaScript tanpa framework aplikasi.
+Portofolio statis berbahasa Indonesia untuk GitHub Pages, menggunakan HTML, CSS, dan JavaScript tanpa framework aplikasi.
 
 ## Pratinjau lokal
 
-Jalankan `python3 -m http.server 8000` dari direktori ini, lalu buka http://localhost:8000. Tidak ada proses build. CSS lokal menjaga tata letak tetap berfungsi ketika CDN Tailwind atau Google Fonts tidak tersedia.
+Jalankan `python3 -m http.server 8000` dari direktori ini, lalu buka http://localhost:8000. Tidak ada proses build. CSS lokal menjaga tata letak tetap berfungsi ketika Google Fonts tidak tersedia.
 
 ## Struktur
 
