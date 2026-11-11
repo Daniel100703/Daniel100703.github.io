@@ -34,6 +34,11 @@ RME masih dalam pengembangan; screenshot yang disertakan secara eksplisit bertan
 | `claude-chatgpt-skills.png` | Daftar skill |
 | `server-sftp.png` | Dokumentasi folder server melalui SFTP |
 | `server-sftp-detail.png` | Dokumentasi folder server tambahan |
+| `nusindo-beranda.webp` | Beranda publik Nusindo.id; sampul proyek |
+| `nusindo-katalog-event.webp` | Katalog dan filter event |
+| `nusindo-dashboard-mitra.webp` | Dasbor akun mitra contoh |
+| `nusindo-bagikan-event.webp` | Halaman untuk membagikan event |
+| `nusindo-komisi-mitra.webp` | Ringkasan komisi mitra contoh |
 
 Seluruh sembilan tangkapan layar asli disimpan; galeri utama menampilkan yang relevan dengan studi kasus. Dokumentasi SFTP tersimpan sebagai aset tambahan. Gambar sumber tidak diubah atau diklaim telah disensor.
 
